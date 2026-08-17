@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Sparkles, ArrowRight, TrendingUp, Check } from 'lucide-react';
+import { ArrowRight, TrendingUp, Check, Target, Zap } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface ActionFirstMarketingProps {
   onOpenGetStarted: () => void;
@@ -52,9 +53,15 @@ export const ActionFirstMarketing: React.FC<ActionFirstMarketingProps> = ({ onOp
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
+        <motion.div 
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center max-w-3xl mx-auto mb-14 sm:mb-18"
+        >
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold uppercase tracking-wider mb-4 border border-blue-200/80">
-            <Sparkles className="w-3.5 h-3.5" />
+            <Target className="w-3.5 h-3.5" />
             <span>Action-First Paradigm</span>
           </div>
 
@@ -66,11 +73,16 @@ export const ActionFirstMarketing: React.FC<ActionFirstMarketingProps> = ({ onOp
           <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
             Traditional marketing platforms give you dashboards. OptigoAI gives you decisions. Instead of spending hours analyzing charts, you get a simple priority list of actions that can help your business grow.
           </p>
-        </div>
+        </motion.div>
 
         {/* Interactive Today's Priority Action Board */}
-        <div className="max-w-4xl mx-auto bg-[#FAF9F6] rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
-          
+        <motion.div 
+          initial={{ opacity: 0, y: 40, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+          className="max-w-4xl mx-auto bg-[#FAF9F6] rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm"
+        >
           {/* Header inside Board */}
           <div className="flex flex-wrap items-center justify-between gap-4 pb-5 border-b border-slate-200 mb-6">
             <div className="flex items-center gap-3">
@@ -131,7 +143,7 @@ export const ActionFirstMarketing: React.FC<ActionFirstMarketingProps> = ({ onOp
                       </p>
 
                       <div className="text-[11px] text-blue-700 font-medium pt-1 flex items-center gap-1.5">
-                        <Sparkles className="w-3.5 h-3.5 text-blue-500" />
+                        <Zap className="w-3.5 h-3.5 text-blue-500" />
                         <span>{task.aiAction}</span>
                       </div>
                     </div>
@@ -173,7 +185,7 @@ export const ActionFirstMarketing: React.FC<ActionFirstMarketingProps> = ({ onOp
             </button>
           </div>
 
-        </div>
+        </motion.div>
 
       </div>
     </section>

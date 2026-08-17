@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, CheckCircle2, Zap } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface CTASectionProps {
   onOpenGetStarted: () => void;
@@ -15,8 +16,13 @@ export const CTASection: React.FC<CTASectionProps> = ({ onOpenGetStarted }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Main Light-Themed Luxury CTA Card */}
-        <div className="bg-gradient-to-br from-[#F5F8F5] via-white to-[#EEF5F0] rounded-[36px] sm:rounded-[44px] p-8 sm:p-14 md:p-20 text-center shadow-lg border border-emerald-900/10 relative overflow-hidden">
-          
+        <motion.div 
+          initial={{ opacity: 0, y: 44, scale: 0.97 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="bg-gradient-to-br from-[#F5F8F5] via-white to-[#EEF5F0] rounded-[36px] sm:rounded-[44px] p-8 sm:p-14 md:p-20 text-center shadow-lg border border-emerald-900/10 relative overflow-hidden"
+        >
           {/* Subtle Ambient Glow inside Card */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-100/50 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl pointer-events-none" />
@@ -79,7 +85,7 @@ export const CTASection: React.FC<CTASectionProps> = ({ onOpenGetStarted }) => {
             </div>
 
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

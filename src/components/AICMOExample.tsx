@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Sparkles, MessageSquare, ArrowRight, Check, Play } from 'lucide-react';
+import { MessageSquare, ArrowRight, Check, Play, Cpu } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface AICMOExampleProps {
   onOpenGetStarted: () => void;
@@ -59,38 +60,11 @@ export const AICMOExample: React.FC<AICMOExampleProps> = ({ onOpenGetStarted, on
         },
       ],
       recommendedSteps: [
-        { id: 'step-seo-1', label: "Add 6 high-volume keywords to services", detail: "Optimized for 'specialty coffee' & 'artisan bakery'." },
-        { id: 'step-seo-2', label: "Schedule 2 weekly Google Posts", detail: "Pre-written with localized hashtags." },
-        { id: 'step-seo-3', label: "Activate Review Photo Prompt flyer", detail: "QR code template ready for print." },
+        { id: 'step-4', label: "Add 14 missing local keywords", detail: "Updated Google Business service catalog ready." },
+        { id: 'step-5', label: "Schedule 2 weekly Google updates", detail: "Photo posts with location pins generated." },
+        { id: 'step-6', label: "Enable customer photo prompt campaign", detail: "QR review cards created for in-store display." },
       ],
-      closingNote: "Implementing these 3 steps typically boosts local map pack rank within 14 days.",
-    },
-    {
-      query: "What should I post on social media today?",
-      category: "Daily Content",
-      opportunities: [
-        {
-          num: "1",
-          title: "Trending Local Foodie Topic",
-          desc: "Local audience engagement peaks on Thursday mornings for weekend breakfast planning.",
-        },
-        {
-          num: "2",
-          title: "Behind-the-Scenes High Engagement",
-          desc: "Bakery preparation reels generate 3.2x higher save rates than static menu shots.",
-        },
-        {
-          num: "3",
-          title: "Limited Quantity FOMO Hook",
-          desc: "Highlighting limited-batch seasonal pastries drives urgent morning visits.",
-        },
-      ],
-      recommendedSteps: [
-        { id: 'step-soc-1', label: "Publish 'Fresh Batch Brioche' Instagram Reel", detail: "Caption, sound suggestion, and hashtags ready." },
-        { id: 'step-soc-2', label: "Cross-post to Google Business Updates", detail: "Instant map pack viewer engagement." },
-        { id: 'step-soc-3', label: "Post Morning Poll on Instagram Stories", detail: "'Matcha Latte vs Classic Cappuccino?'" },
-      ],
-      closingNote: "Everything is formatted with captions, hashtags, and ideal posting time (8:30 AM).",
+      closingNote: "All keyword expansions and post schedules are ready to deploy in 1 tap.",
     },
   ];
 
@@ -105,9 +79,15 @@ export const AICMOExample: React.FC<AICMOExampleProps> = ({ onOpenGetStarted, on
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center max-w-3xl mx-auto mb-12 sm:mb-16"
+        >
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold uppercase tracking-wider mb-4 border border-blue-200/80">
-            <Sparkles className="w-3.5 h-3.5" />
+            <Cpu className="w-3.5 h-3.5" />
             <span>Interactive Demo</span>
           </div>
 
@@ -118,10 +98,16 @@ export const AICMOExample: React.FC<AICMOExampleProps> = ({ onOpenGetStarted, on
           <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
             Experience how OptigoAI turns real business questions into immediate, high-converting marketing campaigns and actions.
           </p>
-        </div>
+        </motion.div>
 
         {/* Prompt Selector Pills */}
-        <div className="flex items-center justify-center gap-2 flex-wrap mb-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1, duration: 0.5 }}
+          className="flex items-center justify-center gap-2 flex-wrap mb-8"
+        >
           {conversations.map((c, idx) => (
             <button
               key={c.query}
@@ -136,10 +122,16 @@ export const AICMOExample: React.FC<AICMOExampleProps> = ({ onOpenGetStarted, on
               <span>"{c.query}"</span>
             </button>
           ))}
-        </div>
+        </motion.div>
 
         {/* Conversation Display Card */}
-        <div className="max-w-4xl mx-auto bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl">
+        <motion.div 
+          initial={{ opacity: 0, y: 40, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+          className="max-w-4xl mx-auto bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl"
+        >
           
           {/* User Message Bubble */}
           <div className="flex items-start justify-end gap-3 mb-6">
@@ -154,7 +146,7 @@ export const AICMOExample: React.FC<AICMOExampleProps> = ({ onOpenGetStarted, on
           {/* AI CMO Response Bubble */}
           <div className="flex items-start gap-3 sm:gap-4 mb-8">
             <div className="w-10 h-10 rounded-2xl bg-slate-900 text-white flex items-center justify-center shadow-md shrink-0 mt-1">
-              <Sparkles className="w-5 h-5 text-blue-400" />
+              <Cpu className="w-5 h-5 text-blue-400" />
             </div>
 
             <div className="flex-1 bg-slate-50 rounded-2xl p-5 sm:p-7 border border-slate-200/80 space-y-6">
@@ -258,7 +250,7 @@ export const AICMOExample: React.FC<AICMOExampleProps> = ({ onOpenGetStarted, on
             </button>
           </div>
 
-        </div>
+        </motion.div>
 
       </div>
     </section>

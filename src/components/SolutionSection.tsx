@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AlertOctagon, HelpCircle, Lightbulb, Zap, CheckCircle2, ArrowRight, Check, Activity } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface SolutionSectionProps {
   onOpenGetStarted: () => void;
@@ -39,7 +40,13 @@ export const SolutionSection: React.FC<SolutionSectionProps> = ({ onOpenGetStart
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
+        <motion.div 
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center max-w-3xl mx-auto mb-14 sm:mb-18"
+        >
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold uppercase tracking-wider mb-4 border border-blue-200/80">
             <Activity className="w-3.5 h-3.5" />
             <span>The Solution</span>
@@ -56,50 +63,79 @@ export const SolutionSection: React.FC<SolutionSectionProps> = ({ onOpenGetStart
           <p className="text-sm sm:text-base text-slate-500 leading-relaxed max-w-2xl mx-auto">
             OptigoAI learns about your business and continuously looks for ways to improve your marketing and customer growth. It doesn't just tell you what happened.
           </p>
-        </div>
+        </motion.div>
 
         {/* 4 Pillars Summary Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-14">
-          <div className="p-6 rounded-3xl bg-[#FAF9F6] border border-slate-200/80 hover:shadow-md transition-shadow">
+          <motion.div 
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.08, duration: 0.5 }}
+            className="p-6 rounded-3xl bg-[#FAF9F6] border border-slate-200/80 hover:shadow-md transition-shadow"
+          >
             <div className="w-9 h-9 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center mb-4 border border-red-100">
               <AlertOctagon className="w-4 h-4" />
             </div>
             <h3 className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">Pillar 01</h3>
             <h4 className="text-base font-bold text-slate-900 mb-1.5">What is wrong.</h4>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">Pinpoints exact bottlenecks in your online presence and visibility.</p>
-          </div>
+          </motion.div>
 
-          <div className="p-6 rounded-3xl bg-[#FAF9F6] border border-slate-200/80 hover:shadow-md transition-shadow">
+          <motion.div 
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.16, duration: 0.5 }}
+            className="p-6 rounded-3xl bg-[#FAF9F6] border border-slate-200/80 hover:shadow-md transition-shadow"
+          >
             <div className="w-9 h-9 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4 border border-amber-100">
               <HelpCircle className="w-4 h-4" />
             </div>
             <h3 className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">Pillar 02</h3>
             <h4 className="text-base font-bold text-slate-900 mb-1.5">Why it matters.</h4>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">Translates algorithm changes and competitor metrics into real revenue impact.</p>
-          </div>
+          </motion.div>
 
-          <div className="p-6 rounded-3xl bg-[#FAF9F6] border border-slate-200/80 hover:shadow-md transition-shadow">
+          <motion.div 
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.24, duration: 0.5 }}
+            className="p-6 rounded-3xl bg-[#FAF9F6] border border-slate-200/80 hover:shadow-md transition-shadow"
+          >
             <div className="w-9 h-9 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4 border border-blue-100">
               <Lightbulb className="w-4 h-4" />
             </div>
             <h3 className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">Pillar 03</h3>
             <h4 className="text-base font-bold text-slate-900 mb-1.5">What you should do.</h4>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">Delivers direct, high-priority actions rather than confusing analytics.</p>
-          </div>
+          </motion.div>
 
-          <div className="p-6 rounded-3xl bg-[#FAF9F6] border border-slate-200/80 hover:shadow-md transition-shadow">
+          <motion.div 
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.32, duration: 0.5 }}
+            className="p-6 rounded-3xl bg-[#FAF9F6] border border-slate-200/80 hover:shadow-md transition-shadow"
+          >
             <div className="w-9 h-9 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 border border-emerald-100">
               <Zap className="w-4 h-4" />
             </div>
             <h3 className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">Pillar 04</h3>
             <h4 className="text-base font-bold text-slate-900 mb-1.5">And helps you do it.</h4>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">Generates all creatives, copies, and review replies ready for 1-click execution.</p>
-          </div>
+          </motion.div>
         </div>
 
         {/* Live Diagnostic Showcase (Light Themed Luxury Case Study Canvas) */}
-        <div className="bg-gradient-to-br from-[#FAF9F6] via-white to-[#F5F8F6] rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 md:p-12 border border-slate-200/90 shadow-md relative overflow-hidden">
-          
+        <motion.div 
+          initial={{ opacity: 0, y: 40, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+          className="bg-gradient-to-br from-[#FAF9F6] via-white to-[#F5F8F6] rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 md:p-12 border border-slate-200/90 shadow-md relative overflow-hidden"
+        >
           {/* Subtle Ambient Soft Glow */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100/30 rounded-full blur-3xl pointer-events-none" />
           
@@ -234,8 +270,7 @@ export const SolutionSection: React.FC<SolutionSectionProps> = ({ onOpenGetStart
             </div>
 
           </div>
-
-        </div>
+        </motion.div>
 
       </div>
     </section>

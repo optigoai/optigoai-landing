@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { 
   Sparkles, Globe, MessageSquareQuote, Search, PenTool, Image, Users, Megaphone, Lightbulb, 
-  CheckCircle2, ArrowRight, Star, Send, ShieldCheck, Flame, Copy, Check
+  CheckCircle2, ArrowRight, Star, Send, ShieldCheck, Flame, Copy, Check, Layers
 } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface CoreFeaturesProps {
   onOpenGetStarted: () => void;
@@ -180,11 +181,16 @@ export const CoreFeatures: React.FC<CoreFeaturesProps> = ({ onOpenGetStarted }) 
     <section id="features" className="py-20 sm:py-28 bg-white border-b border-slate-200/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center max-w-3xl mx-auto mb-14 sm:mb-18"
+        >
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold uppercase tracking-wider mb-4 border border-blue-200/80">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Comprehensive Growth Suite</span>
+            <Layers className="w-3.5 h-3.5" />
+            <span>Integrated Platform</span>
           </div>
 
           <h2 className="font-serif-heading text-4xl sm:text-5xl md:text-6xl text-slate-900 tracking-tight leading-tight mb-4">
@@ -195,10 +201,15 @@ export const CoreFeatures: React.FC<CoreFeaturesProps> = ({ onOpenGetStarted }) 
           <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
             Nine integrated AI capabilities engineered to handle strategy, creation, execution, and analytics in one cohesive workspace.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Athleats Style Segmented Feature Pill Tabs */}
-        <div className="flex items-center justify-start lg:justify-center gap-1.5 overflow-x-auto pb-4 mb-10 no-scrollbar">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1, duration: 0.5 }}
+          className="flex items-center justify-start lg:justify-center gap-1.5 overflow-x-auto pb-4 mb-10 no-scrollbar"
+        >
           {features.map((f, idx) => {
             const Icon = f.icon;
             const isSelected = activeTab === idx;
@@ -217,10 +228,15 @@ export const CoreFeatures: React.FC<CoreFeaturesProps> = ({ onOpenGetStarted }) 
               </button>
             );
           })}
-        </div>
+        </motion.div>
 
-        {/* Feature Interactive Showcase Card */}
-        <div className="bg-[#FAF9F6] rounded-3xl p-6 sm:p-10 md:p-12 border border-slate-200 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 40, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+          className="bg-[#FAF9F6] rounded-3xl p-6 sm:p-10 md:p-12 border border-slate-200 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
+        >
           
           {/* Left Column: Feature Details */}
           <div className="lg:col-span-6 space-y-6">
@@ -575,8 +591,7 @@ export const CoreFeatures: React.FC<CoreFeaturesProps> = ({ onOpenGetStarted }) 
             )}
 
           </div>
-
-        </div>
+        </motion.div>
 
       </div>
     </section>

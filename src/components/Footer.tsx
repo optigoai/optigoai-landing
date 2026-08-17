@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface FooterProps {
   onOpenGetStarted: () => void;
@@ -12,7 +13,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenGetStarted, onOpenVideoGui
       
       {/* Main Floating Athleats-Style Footer Card */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="bg-[#F5F3EF] rounded-[36px] sm:rounded-[44px] p-8 sm:p-12 md:p-14 border border-slate-200/80 shadow-xs">
+        <motion.div 
+          initial={{ opacity: 0, y: 36, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+          className="bg-[#F5F3EF] rounded-[36px] sm:rounded-[44px] p-8 sm:p-12 md:p-14 border border-slate-200/80 shadow-xs"
+        >
           
           {/* Top Columns Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 sm:gap-10 pb-12 border-b border-slate-200/80">
@@ -124,15 +131,21 @@ export const Footer: React.FC<FooterProps> = ({ onOpenGetStarted, onOpenVideoGui
             </div>
           </div>
 
-        </div>
+        </motion.div>
       </div>
 
       {/* Large Shadow/Watermark Font Under the Footer that Merges with the Box */}
-      <div className="relative -mt-6 sm:-mt-12 md:-mt-20 pointer-events-none select-none overflow-hidden z-0 px-4">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="relative -mt-6 sm:-mt-12 md:-mt-20 pointer-events-none select-none overflow-hidden z-0 px-4"
+      >
         <div className="text-center font-bold tracking-tight text-[17vw] sm:text-[18vw] leading-none uppercase font-serif-heading bg-gradient-to-b from-slate-900/25 via-slate-900/10 to-transparent bg-clip-text text-transparent whitespace-nowrap">
           OptigoAI
         </div>
-      </div>
+      </motion.div>
 
     </footer>
   );

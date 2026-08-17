@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Search, Brain, Lightbulb, PenTool, CheckCircle, TrendingUp, ArrowRight, Cpu } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface TrustValueStatementProps {
   onOpenGetStarted: () => void;
@@ -56,7 +57,13 @@ export const TrustValueStatement: React.FC<TrustValueStatementProps> = ({ onOpen
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Voiceflow Style Circular Context Engine Badge */}
-        <div className="flex flex-col items-center justify-center text-center mb-12 sm:mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col items-center justify-center text-center mb-12 sm:mb-16"
+        >
           <div className="relative mb-6">
             {/* Spinning decorative ring */}
             <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border border-blue-200/60 p-1 flex items-center justify-center relative">
@@ -82,35 +89,68 @@ export const TrustValueStatement: React.FC<TrustValueStatementProps> = ({ onOpen
 
           {/* High-Level Stats Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 pt-8 pb-12 w-full max-w-4xl border-y border-slate-100">
-            <div className="text-center">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+              className="text-center"
+            >
               <div className="font-serif-heading text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-900 mb-1">
                 3.4x
               </div>
               <p className="text-xs sm:text-sm font-medium text-slate-500">Average Customer Growth</p>
-            </div>
-            <div className="text-center">
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="text-center"
+            >
               <div className="font-serif-heading text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-900 mb-1">
                 100%
               </div>
               <p className="text-xs sm:text-sm font-medium text-slate-500">Review Reply Coverage</p>
-            </div>
-            <div className="text-center">
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="text-center"
+            >
               <div className="font-serif-heading text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-900 mb-1">
                 10K+
               </div>
               <p className="text-xs sm:text-sm font-medium text-slate-500">Local Businesses Empowered</p>
-            </div>
-            <div className="text-center">
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              className="text-center"
+            >
               <div className="font-serif-heading text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-900 mb-1">
                 &lt; 30s
               </div>
               <p className="text-xs sm:text-sm font-medium text-slate-500">Campaign Creation Time</p>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Highlight 6-Step Workflow: ANALYZE -> UNDERSTAND -> RECOMMEND -> CREATE -> ACT -> IMPROVE */}
-        <div className="bg-slate-50/80 rounded-3xl p-6 sm:p-10 border border-slate-200/80">
+        <motion.div 
+          initial={{ opacity: 0, y: 36 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+          className="bg-slate-50/80 rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-xs"
+        >
           <div className="text-center mb-8">
             <span className="text-xs font-bold text-blue-600 uppercase tracking-wider">Continuous Growth Loop</span>
             <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mt-1">
@@ -175,7 +215,7 @@ export const TrustValueStatement: React.FC<TrustValueStatementProps> = ({ onOpen
             </button>
           </div>
 
-        </div>
+        </motion.div>
 
       </div>
     </section>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Brain, PenTool, BarChart3, ArrowRight, CheckCircle2, Globe, Star, Check, Zap, Layers } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface HowItWorksProps {
   onOpenGetStarted: () => void;
@@ -120,7 +121,13 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenGetStarted }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
+        <motion.div 
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center max-w-3xl mx-auto mb-14 sm:mb-18"
+        >
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold uppercase tracking-wider mb-4 border border-blue-200/80">
             <Layers className="w-3.5 h-3.5" />
             <span>Step-by-Step System</span>
@@ -134,10 +141,16 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenGetStarted }) => {
           <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
             Six simple steps to turn your everyday business data into continuous customer acquisition.
           </p>
-        </div>
+        </motion.div>
 
         {/* Step Navigation Pill Selector */}
-        <div className="flex items-center justify-start lg:justify-center gap-2 overflow-x-auto pb-4 mb-10 no-scrollbar">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1, duration: 0.5 }}
+          className="flex items-center justify-start lg:justify-center gap-2 overflow-x-auto pb-4 mb-10 no-scrollbar"
+        >
           {steps.map((s, idx) => {
             const isSelected = activeStep === idx;
             return (
@@ -159,10 +172,16 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenGetStarted }) => {
               </button>
             );
           })}
-        </div>
+        </motion.div>
 
         {/* Dynamic Step Showcase Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch bg-white rounded-3xl p-6 sm:p-10 md:p-12 border border-slate-200 shadow-sm">
+        <motion.div 
+          initial={{ opacity: 0, y: 40, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+          className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch bg-white rounded-3xl p-6 sm:p-10 md:p-12 border border-slate-200 shadow-sm"
+        >
           
           {/* Left Column: Step Description & Platform tags */}
           <div className="lg:col-span-5 flex flex-col justify-between">
@@ -295,7 +314,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenGetStarted }) => {
 
           </div>
 
-        </div>
+        </motion.div>
 
       </div>
     </section>

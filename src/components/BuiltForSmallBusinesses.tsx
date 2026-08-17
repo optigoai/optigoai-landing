@@ -1,5 +1,6 @@
 import React from 'react';
 import { Search, ArrowRight, Utensils, ShoppingBag, Scissors, Dumbbell, Star, ShieldCheck } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface BuiltForSmallBusinessesProps {
   onOpenGetStarted: () => void;
@@ -17,7 +18,13 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Athleats Style Split Section Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 sm:mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 sm:mb-16"
+        >
           <div className="max-w-2xl">
             <h2 className="font-serif-heading text-4xl sm:text-5xl md:text-6xl text-slate-900 tracking-tight leading-[1.08]">
               The all-in-one marketing <br className="hidden sm:inline" />
@@ -29,13 +36,19 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
               Explore tailored growth playbooks, track local search rankings, and stay consistent with your daily actions.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Athleats Bento Grid Layout (100% Feature-Focused & Product-Driven) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 items-stretch">
           
           {/* Card 1 (Top Left, 4 Cols): Advanced Campaign Studio */}
-          <div className="lg:col-span-4 bg-[#F5F3EF] rounded-3xl p-6 sm:p-7 border border-slate-200/80 flex flex-col justify-between shadow-xs">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.08, duration: 0.55 }}
+            className="lg:col-span-4 bg-[#F5F3EF] rounded-3xl p-6 sm:p-7 border border-slate-200/80 flex flex-col justify-between shadow-xs"
+          >
             <div>
               {/* Mockup Search & Post Preview */}
               <div className="bg-white rounded-2xl p-3.5 border border-slate-200/80 shadow-xs mb-6 space-y-3">
@@ -67,10 +80,16 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
                 <strong className="text-slate-900 font-bold">1-Click Campaign Studio.</strong> Create seasonal flyers, weekend special announcements, and promotional copy formatted for every network in under 15 seconds.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 2 (Top Center, 4 Cols): Key Growth Levers Pill Cloud */}
-          <div className="lg:col-span-4 bg-[#F5F3EF] rounded-3xl p-6 sm:p-7 border border-slate-200/80 flex flex-col justify-between shadow-xs">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.16, duration: 0.55 }}
+            className="lg:col-span-4 bg-[#F5F3EF] rounded-3xl p-6 sm:p-7 border border-slate-200/80 flex flex-col justify-between shadow-xs"
+          >
             <div>
               {/* Cloud of pills preview */}
               <div className="flex flex-wrap gap-2 mb-6 p-2">
@@ -96,10 +115,16 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
                 <strong className="text-slate-900 font-bold">Key Growth Levers.</strong> Scans local algorithm updates, competitor posting frequencies, and review velocity to prioritize what moves the needle for your revenue.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 3 (Top Right, 4 Cols): Soft Peach Reputation Shield Card */}
-          <div className="lg:col-span-4 bg-[#FDF0E6] rounded-3xl p-6 sm:p-8 border border-[#F6DEC9] flex flex-col justify-between shadow-xs">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.24, duration: 0.55 }}
+            className="lg:col-span-4 bg-[#FDF0E6] rounded-3xl p-6 sm:p-8 border border-[#F6DEC9] flex flex-col justify-between shadow-xs"
+          >
             <div>
               <div className="flex items-center justify-between mb-4">
                 <div className="w-10 h-10 rounded-2xl bg-amber-100 border border-amber-200 flex items-center justify-center text-amber-800">
@@ -132,10 +157,16 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
               <span>Response Speed: &lt; 3 mins</span>
               <span className="text-emerald-700 font-bold">100% Coverage</span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 4 (Bottom Left, 8 Cols): Soft Sage Green Local Dominance Card */}
-          <div className="lg:col-span-8 bg-[#EAF3E8] rounded-3xl p-6 sm:p-8 border border-[#D7E8D3] flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.12, duration: 0.55 }}
+            className="lg:col-span-8 bg-[#EAF3E8] rounded-3xl p-6 sm:p-8 border border-[#D7E8D3] flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs"
+          >
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
@@ -179,10 +210,16 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
               </button>
               <span className="text-[10px] text-emerald-800 font-medium">Instant 60-Second Scan</span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 5 (Bottom Right, 4 Cols): Industries & Playbooks */}
-          <div className="lg:col-span-4 bg-[#F5F3EF] rounded-3xl p-6 sm:p-7 border border-slate-200/80 flex flex-col justify-between shadow-xs">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.20, duration: 0.55 }}
+            className="lg:col-span-4 bg-[#F5F3EF] rounded-3xl p-6 sm:p-7 border border-slate-200/80 flex flex-col justify-between shadow-xs"
+          >
             <div>
               {/* 2x2 Category Tiles */}
               <div className="grid grid-cols-2 gap-2.5 mb-6">
@@ -221,7 +258,7 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
                 <strong className="text-slate-900 font-bold">Pre-Trained Industry Playbooks.</strong> From food service and retail to medical and local trades, get customized growth plans with zero setup.
               </p>
             </div>
-          </div>
+          </motion.div>
 
         </div>
 

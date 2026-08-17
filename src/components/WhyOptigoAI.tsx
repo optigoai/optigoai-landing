@@ -1,5 +1,6 @@
 import React from 'react';
-import { Sparkles, Store, TrendingUp, UserCheck, Users, Check, X, ArrowRight } from 'lucide-react';
+import { Store, TrendingUp, UserCheck, Users, Check, X, ArrowRight, Layers } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface WhyOptigoAIProps {
   onOpenGetStarted: () => void;
@@ -42,9 +43,15 @@ export const WhyOptigoAI: React.FC<WhyOptigoAIProps> = ({ onOpenGetStarted }) =>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Part 1: Who Is OptigoAI For? */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center max-w-3xl mx-auto mb-12 sm:mb-16"
+        >
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold uppercase tracking-wider mb-4 border border-blue-200/80">
-            <Sparkles className="w-3.5 h-3.5" />
+            <Layers className="w-3.5 h-3.5" />
             <span>Built For Growth</span>
           </div>
 
@@ -56,15 +63,19 @@ export const WhyOptigoAI: React.FC<WhyOptigoAIProps> = ({ onOpenGetStarted }) =>
           <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
             Whether you operate a single storefront or manage multi-location operations, OptigoAI adapts to your growth stage.
           </p>
-        </div>
+        </motion.div>
 
         {/* 4 Persona Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          {personas.map((p) => {
+          {personas.map((p, idx) => {
             const Icon = p.icon;
             return (
-              <div
+              <motion.div
                 key={p.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.08, duration: 0.5 }}
                 className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow"
               >
                 <div>
@@ -74,14 +85,19 @@ export const WhyOptigoAI: React.FC<WhyOptigoAIProps> = ({ onOpenGetStarted }) =>
                   <h3 className="text-base font-bold text-slate-900 mb-2">{p.title}</h3>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{p.desc}</p>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
 
         {/* Part 2: Why OptigoAI? & One Business -> One Action Plan */}
-        <div className="bg-white rounded-3xl p-6 sm:p-10 md:p-14 border border-slate-200 shadow-sm">
-          
+        <motion.div 
+          initial={{ opacity: 0, y: 40, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+          className="bg-white rounded-3xl p-6 sm:p-10 md:p-14 border border-slate-200 shadow-sm"
+        >
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-xs font-bold text-blue-600 uppercase tracking-wider">The OptigoAI Difference</span>
             <h3 className="font-serif-heading text-3xl sm:text-4xl text-slate-900 mt-2 mb-4">
@@ -157,7 +173,7 @@ export const WhyOptigoAI: React.FC<WhyOptigoAIProps> = ({ onOpenGetStarted }) =>
             </button>
           </div>
 
-        </div>
+        </motion.div>
 
       </div>
     </section>

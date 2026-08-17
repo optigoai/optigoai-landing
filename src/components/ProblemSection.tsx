@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AlertCircle, CheckCircle2, ArrowRight, Star, Users, TrendingUp, Zap, ThumbsUp, MapPin, Check, Wifi, Battery, MessageSquare, Flame } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface ProblemSectionProps {
   onOpenGetStarted: () => void;
@@ -370,11 +371,17 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ onOpenGetStarted
     <section className="py-20 sm:py-28 bg-[#FAF9F6] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-red-700 text-xs font-semibold uppercase tracking-wider mb-4 border border-red-200/80">
+        {/* Section Header */}
+        <motion.div 
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center max-w-3xl mx-auto mb-14 sm:mb-18"
+        >
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-red-50 text-red-700 text-xs font-semibold uppercase tracking-wider mb-4 border border-red-200/80">
             <AlertCircle className="w-3.5 h-3.5" />
-            <span>The Small Business Dilemma</span>
+            <span>The Reality of Small Business Marketing</span>
           </div>
 
           <h2 className="font-serif-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 tracking-tight leading-tight mb-5">
@@ -385,13 +392,19 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ onOpenGetStarted
           <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
             You already have a business to manage. You shouldn't have to become an SEO expert, social media manager, content creator, advertising specialist, and marketing analyst just to get more customers.
           </p>
-        </div>
+        </motion.div>
 
         {/* Voiceflow Style 3-Column Visual Pillar Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-16">
           
           {/* Card 1: Diagnose & Uncover */}
-          <div className="group rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-7 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden relative">
+          <motion.div 
+            initial={{ opacity: 0, y: 36 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1, duration: 0.55 }}
+            className="group rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-7 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden relative"
+          >
             <div className="relative z-10">
               {/* Mockup Preview Header with Background Texture */}
               <div className="h-44 sm:h-48 rounded-2xl bg-slate-950 p-4 mb-6 border border-slate-800 flex flex-col justify-between text-white relative overflow-hidden">
@@ -437,10 +450,16 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ onOpenGetStarted
               <span>Automatic Audit</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 2: Autonomous AI CMO */}
-          <div className="group rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-7 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden relative">
+          <motion.div 
+            initial={{ opacity: 0, y: 36 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.55 }}
+            className="group rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-7 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden relative"
+          >
             <div className="relative z-10">
               {/* Mockup Preview Header with Background Texture */}
               <div className="h-44 sm:h-48 rounded-2xl bg-slate-950 p-4 mb-6 border border-slate-800 flex flex-col justify-between relative overflow-hidden">
@@ -482,10 +501,16 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ onOpenGetStarted
               <span>Decision Engine</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 3: Instant Execution & ROI */}
-          <div className="group rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-7 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden relative">
+          <motion.div 
+            initial={{ opacity: 0, y: 36 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.55 }}
+            className="group rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-7 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden relative"
+          >
             <div className="relative z-10">
               {/* Mockup Preview Header with Background Texture */}
               <div className="h-44 sm:h-48 rounded-2xl bg-slate-950 p-4 mb-6 border border-slate-800 flex flex-col justify-between text-white relative overflow-hidden">
@@ -528,12 +553,18 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ onOpenGetStarted
               <span>Measurable Growth</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </div>
-          </div>
+          </motion.div>
 
         </div>
 
         {/* Interactive Solution Finder with 9:16 Light-Themed iPhone Mockup */}
-        <div className="bg-white rounded-3xl p-6 sm:p-10 md:p-12 border border-slate-200 shadow-sm">
+        <motion.div 
+          initial={{ opacity: 0, y: 40, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+          className="bg-white rounded-3xl p-6 sm:p-10 md:p-12 border border-slate-200 shadow-sm"
+        >
           
           <div className="max-w-2xl mb-8">
             <span className="text-xs font-bold text-blue-600 uppercase tracking-wider">Interactive Solution Finder</span>
@@ -683,7 +714,7 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ onOpenGetStarted
             </div>
 
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

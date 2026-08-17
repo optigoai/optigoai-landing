@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Sparkles, ArrowRight, CheckCircle2, Zap, Target, Flame, Star, Store, Trophy } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Zap, Target, Flame, Star, Store, Trophy, Compass } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface SimpleByDesignProps {
   onOpenGetStarted: () => void;
@@ -58,11 +59,11 @@ export const SimpleByDesign: React.FC<SimpleByDesignProps> = ({ onOpenGetStarted
       icon: Trophy,
       tagline: 'Competitive Domination Engine',
       plan: [
-        { step: '1', title: 'Scan top 3 local competitors', desc: 'Audits competitor keyword rankings, review sentiment, and posting habits.' },
-        { step: '2', title: 'Capitalize on competitor weaknesses', desc: 'Highlights your unique advantages in Google Posts & social ads.' },
-        { step: '3', title: 'Outrank on high-intent keywords', desc: 'Injects missing local keywords into your business profile.' },
+        { step: '1', title: 'Scan top 3 competitor blindspots', desc: 'Finds unanswered negative reviews and service complaints on rivals.' },
+        { step: '2', title: 'Launch counter-positioning posts', desc: 'Emphasizes your faster turnaround, warranty, and superior quality.' },
+        { step: '3', title: 'Capture high-intent competitor keywords', desc: 'Optimizes profile for rival brand search variations.' },
       ],
-      output: 'Overtakes competitor search prominence in 30 days.',
+      output: 'Outrank neighborhood rivals in local map search within 30 days.',
     },
   ];
 
@@ -73,9 +74,15 @@ export const SimpleByDesign: React.FC<SimpleByDesignProps> = ({ onOpenGetStarted
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center max-w-3xl mx-auto mb-12 sm:mb-16"
+        >
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold uppercase tracking-wider mb-4 border border-blue-200/80">
-            <Sparkles className="w-3.5 h-3.5" />
+            <Compass className="w-3.5 h-3.5" />
             <span>Zero Complexity</span>
           </div>
 
@@ -86,11 +93,16 @@ export const SimpleByDesign: React.FC<SimpleByDesignProps> = ({ onOpenGetStarted
           <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
             You don't need to understand SEO, analytics, algorithms, content strategy, or marketing automation. Just tell OptigoAI what you want.
           </p>
-        </div>
+        </motion.div>
 
         {/* Goal Converter Interactive Tool */}
-        <div className="max-w-4xl mx-auto bg-[#FAF9F6] rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
-          
+        <motion.div 
+          initial={{ opacity: 0, y: 40, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+          className="max-w-4xl mx-auto bg-[#FAF9F6] rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm"
+        >
           <div className="mb-6">
             <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-3">
               Step 1: Pick your business goal:
@@ -168,7 +180,7 @@ export const SimpleByDesign: React.FC<SimpleByDesignProps> = ({ onOpenGetStarted
             </button>
           </div>
 
-        </div>
+        </motion.div>
 
       </div>
     </section>
