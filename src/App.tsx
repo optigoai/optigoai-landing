@@ -31,83 +31,83 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-[#FAF9F6] text-slate-900 font-sans selection:bg-blue-600 selection:text-white relative">
-      
+
       {/* Floating Pill Navigation */}
-      <Navbar 
-        onOpenGetStarted={openGetStarted} 
-        onOpenVideoGuide={openVideoGuide} 
+      <Navbar
+        onOpenGetStarted={openGetStarted}
+        onOpenVideoGuide={openVideoGuide}
       />
 
       {/* Main Content Sections */}
       <main>
         {/* 1 & 2: Hero Section */}
-        <HeroSection 
-          onOpenGetStarted={openGetStarted} 
-          onOpenVideoGuide={openVideoGuide} 
+        <HeroSection
+          onOpenGetStarted={openGetStarted}
+          onOpenVideoGuide={openVideoGuide}
         />
 
         {/* 3: Trust & Value Statement with Radial Engine Metrics */}
-        <TrustValueStatement 
-          onOpenGetStarted={openGetStarted} 
+        <TrustValueStatement
+          onOpenGetStarted={openGetStarted}
         />
 
         {/* Visual Proof / Before vs After Comparison & ROI Results */}
-        <ROIResults 
-          onOpenGetStarted={openGetStarted} 
+        <ROIResults
+          onOpenGetStarted={openGetStarted}
         />
 
         {/* 4: The Problem & Voiceflow 3-Column Pillars */}
-        <ProblemSection 
-          onOpenGetStarted={openGetStarted} 
+        <ProblemSection
+          onOpenGetStarted={openGetStarted}
         />
 
         {/* 5: Solution - Meet Your AI CMO */}
-        <SolutionSection 
-          onOpenGetStarted={openGetStarted} 
+        <SolutionSection
+          onOpenGetStarted={openGetStarted}
         />
 
         {/* 6: How It Works - 6 Step System */}
-        <HowItWorks 
-          onOpenGetStarted={openGetStarted} 
+        <HowItWorks
+          onOpenGetStarted={openGetStarted}
         />
 
         {/* 7: Core Features Hub (Athleats / Voiceflow Tabs) */}
-        <CoreFeatures 
-          onOpenGetStarted={openGetStarted} 
+        <CoreFeatures
+          onOpenGetStarted={openGetStarted}
         />
 
         {/* 8: AI CMO Example - Live Simulation */}
-        <AICMOExample 
-          onOpenGetStarted={openGetStarted} 
-          onOpenVideoGuide={openVideoGuide} 
+        <AICMOExample
+          onOpenGetStarted={openGetStarted}
+          onOpenVideoGuide={openVideoGuide}
         />
 
         {/* 9: Action-First Marketing */}
-        <ActionFirstMarketing 
-          onOpenGetStarted={openGetStarted} 
+        <ActionFirstMarketing
+          onOpenGetStarted={openGetStarted}
         />
 
         {/* 10: Built for Small Businesses - 10 Industry Playbooks */}
-        <BuiltForSmallBusinesses 
-          onOpenGetStarted={openGetStarted} 
+        <BuiltForSmallBusinesses
+          onOpenGetStarted={openGetStarted}
         />
 
         {/* 11: Simple by Design - Goal to Action Converter */}
-        <SimpleByDesign 
-          onOpenGetStarted={openGetStarted} 
+        <SimpleByDesign
+          onOpenGetStarted={openGetStarted}
         />
 
         {/* 13: Privacy & Security */}
         <PrivacySecurity />
 
         {/* 14 & 15: Who is OptigoAI for? & Why OptigoAI? Matrix */}
-        <WhyOptigoAI 
-          onOpenGetStarted={openGetStarted} 
+        <WhyOptigoAI
+          onOpenGetStarted={openGetStarted}
         />
 
         {/* 17 & 19: High Converting CTA Banner */}
-        <CTASection 
-          onOpenGetStarted={openGetStarted} 
+        <CTASection
+          onOpenGetStarted={openGetStarted}
         />
 
         {/* 18: Frequently Asked Questions */}
@@ -115,20 +115,20 @@ export function App() {
       </main>
 
       {/* 20: Comprehensive Footer */}
-      <Footer 
-        onOpenGetStarted={openGetStarted} 
-        onOpenVideoGuide={openVideoGuide} 
+      <Footer
+        onOpenGetStarted={openGetStarted}
+        onOpenVideoGuide={openVideoGuide}
       />
 
       {/* Interactive Modals */}
-      <GetStartedModal 
-        isOpen={isGetStartedOpen} 
-        onClose={closeGetStarted} 
+      <GetStartedModal
+        isOpen={isGetStartedOpen}
+        onClose={closeGetStarted}
       />
 
-      <VideoGuideModal 
-        isOpen={isVideoGuideOpen} 
-        onClose={closeVideoGuide} 
+      <VideoGuideModal
+        isOpen={isVideoGuideOpen}
+        onClose={closeVideoGuide}
       />
 
     </div>
