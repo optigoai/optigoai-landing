@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, Play, CheckCircle2, TrendingUp, Zap, Star, ShieldCheck, Send, Mic, ArrowUpRight } from 'lucide-react';
+import { motion, type Variants } from 'framer-motion';
 
 interface HeroSectionProps {
   onOpenGetStarted: () => void;
@@ -11,6 +12,38 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
   const [isGenerating, setIsGenerating] = useState(false);
   const [completedSteps, setCompletedSteps] = useState<number[]>([1]);
 
+  const headlinePart1 = ["Your", "AI", "Marketing", "Manager"];
+  const headlinePart2 = ["That", "Helps", "You", "Get", "More", "Customers."];
+
+  const wordContainer: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.07,
+        delayChildren: 0.12,
+      },
+    },
+  };
+
+  const wordVariant: Variants = {
+    hidden: { opacity: 0, y: 26, filter: 'blur(6px)' },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: 'blur(0px)',
+      transition: { duration: 0.55, ease: 'easeOut' },
+    },
+  };
+
+  const toggleStep = (step: number) => {
+    if (completedSteps.includes(step)) {
+      setCompletedSteps(completedSteps.filter(s => s !== step));
+    } else {
+      setCompletedSteps([...completedSteps, step]);
+    }
+  };
+
   const prompts = [
     {
       query: "How can I get more customers this weekend?",
@@ -18,29 +51,32 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
       actions: [
         { label: "Reply to 5 pending Google reviews", impact: "SEO boost" },
         { label: "Publish 'Weekend 20% Off Brunch' Google Post", impact: "+28 calls" },
-        { label: "Post weekend reel to Instagram & Meta", impact: "High reach" }
+        { label: "Add missing keyword 'artisan specialty coffee'", impact: "+14% reach" }
       ],
-      kpi: "+34% Weekend Footfall"
+      time: "2 mins ago",
+      growth: "+148% Local Actions"
     },
     {
-      query: "Why are competitors ranking higher on Google?",
-      aiResponse: "Found 2 keyword gaps in your services list. Competitors are publishing twice weekly with fresh photos.",
+      query: "Why did my competitors rank higher on Google Maps?",
+      aiResponse: "Competitors within 2 miles added 12 new review responses and 2 weekly photos. Here is your fix:",
       actions: [
-        { label: "Inject 'specialty espresso' into services", impact: "#1 rank" },
-        { label: "Schedule 2 weekly Google updates", impact: "Active status" },
-        { label: "Request photo reviews from 10 recent patrons", impact: "+42% views" }
+        { label: "Auto-generate 5-star review responses", impact: "Rank boost" },
+        { label: "Upload 3 geo-tagged store photos", impact: "Maps lift" },
+        { label: "Sync local business hours for holiday", impact: "Zero drop" }
       ],
-      kpi: "Top 3 Map Pack"
+      time: "Just now",
+      growth: "+210% Visibility"
     },
     {
-      query: "Draft 3 social posts for my autumn special",
-      aiResponse: "3 high-converting post copies, seasonal captions, and hashtag bundles generated for your brand.",
+      query: "Draft a high-converting promotional post for Instagram",
+      aiResponse: "I prepared a localized photo creative and high-converting copy with clear calls to action:",
       actions: [
-        { label: "Approve Autumn Special Instagram Caption", impact: "Ready" },
-        { label: "Schedule Google Business Announcement", impact: "Ready" },
-        { label: "Export 1080x1080 Promotional Creative", impact: "Ready" }
+        { label: "Approve Instagram Feed & Story design", impact: "Ready" },
+        { label: "Schedule 1-click cross-post to Google", impact: "Instant" },
+        { label: "Track customer coupon redemptions", impact: "+35 visits" }
       ],
-      kpi: "Ready in 15s"
+      time: "1 min ago",
+      growth: "+3.4x Engagement"
     }
   ];
 
@@ -53,14 +89,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
     setTimeout(() => {
       setIsGenerating(false);
     }, 400);
-  };
-
-  const toggleStep = (step: number) => {
-    if (completedSteps.includes(step)) {
-      setCompletedSteps(completedSteps.filter(s => s !== step));
-    } else {
-      setCompletedSteps([...completedSteps, step]);
-    }
   };
 
   return (
@@ -77,7 +105,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
         <div className="text-center max-w-4xl mx-auto mb-14 sm:mb-18 relative z-10">
 
           {/* Semi-Circular Ambient Dome Gradient Originating Directly from the Top of the Bottom Showcase Box */}
-          <div className="absolute left-1/2 -translate-x-1/2 -bottom-14 sm:-bottom-18 md:-bottom-20 w-[140vw] sm:w-[115vw] max-w-[1450px] h-[650px] sm:h-[800px] md:h-[950px] pointer-events-none -z-10">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.92 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            className="absolute left-1/2 -translate-x-1/2 -bottom-14 sm:-bottom-18 md:-bottom-20 w-[140vw] sm:w-[115vw] max-w-[1450px] h-[650px] sm:h-[800px] md:h-[950px] pointer-events-none -z-10"
+          >
             {/* Outer Broad Arch */}
             <div 
               className="w-full h-full rounded-t-[1200px] blur-3xl opacity-90"
@@ -92,29 +125,61 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
                 background: 'radial-gradient(ellipse 85% 80% at 50% 100%, rgba(37, 99, 235, 0.52) 0%, rgba(56, 189, 248, 0.38) 40%, rgba(147, 197, 253, 0.18) 75%, transparent 90%)'
               }}
             />
-          </div>
+          </motion.div>
 
           {/* Small Badge - Clean Dot Indicator */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 text-white text-xs font-semibold uppercase tracking-wider mb-6 shadow-sm border border-slate-700/60 hover:border-slate-500 transition-colors">
+          <motion.div 
+            initial={{ opacity: 0, y: -16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 text-white text-xs font-semibold uppercase tracking-wider mb-6 shadow-sm border border-slate-700/60 hover:border-slate-500 transition-colors"
+          >
             <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
             <span>AI-POWERED MARKETING MANAGER</span>
-          </div>
+          </motion.div>
 
-          {/* Editorial Grand Headline */}
-          <h1 className="font-serif-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-slate-900 tracking-tight leading-[1.08] mb-6">
-            Your AI Marketing Manager <br className="hidden sm:inline" />
-            <span className="italic font-serif-heading font-normal text-slate-800">
-              That Helps You Get More Customers.
-            </span>
-          </h1>
+          {/* Editorial Grand Headline with Letter/Word Boot Reveal Animation */}
+          <motion.h1 
+            variants={wordContainer}
+            initial="hidden"
+            animate="visible"
+            className="font-serif-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-slate-900 tracking-tight leading-[1.08] mb-6 flex flex-wrap justify-center gap-x-3 sm:gap-x-4.5 gap-y-1"
+          >
+            <div className="flex flex-wrap justify-center gap-x-2 sm:gap-x-3 w-full">
+              {headlinePart1.map((word, idx) => (
+                <motion.span key={idx} variants={wordVariant} className="inline-block">
+                  {word}
+                </motion.span>
+              ))}
+            </div>
+            <div className="flex flex-wrap justify-center gap-x-2 sm:gap-x-3 w-full">
+              <span className="italic font-serif-heading font-normal text-slate-800 flex flex-wrap justify-center gap-x-2 sm:gap-x-3">
+                {headlinePart2.map((word, idx) => (
+                  <motion.span key={idx} variants={wordVariant} className="inline-block">
+                    {word}
+                  </motion.span>
+                ))}
+              </span>
+            </div>
+          </motion.h1>
 
-          {/* Subheadline */}
-          <p className="text-base sm:text-lg md:text-xl text-slate-600 font-normal leading-relaxed max-w-3xl mx-auto mb-8 sm:mb-10">
+          {/* Subheadline - Enters smoothly after headline */}
+          <motion.p 
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.85, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="text-base sm:text-lg md:text-xl text-slate-600 font-normal leading-relaxed max-w-3xl mx-auto mb-8 sm:mb-10"
+          >
             OptigoAI understands your business, finds what's stopping you from growing, creates your marketing, and helps you take action — all from one simple app.
-          </p>
+          </motion.p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-6">
+          {/* CTA Buttons - Enter after subheadline */}
+          <motion.div 
+            initial={{ opacity: 0, y: 18, scale: 0.97 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ delay: 1.05, duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-6"
+          >
             <button
               onClick={onOpenGetStarted}
               className="w-full sm:w-auto px-8 py-3.5 text-sm sm:text-base font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-full shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/30 transition-all flex items-center justify-center gap-2 group cursor-pointer"
@@ -132,17 +197,27 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
               </div>
               <span>See How It Works</span>
             </button>
-          </div>
+          </motion.div>
 
           {/* Small Trust Note */}
-          <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-500 font-medium">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.25, duration: 0.5 }}
+            className="flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-500 font-medium"
+          >
             <ShieldCheck className="w-4 h-4 text-emerald-600" />
             <span>Built for small and growing businesses. No marketing degree required.</span>
-          </div>
+          </motion.div>
         </div>
 
         {/* Hero Showcase Split Card (Voiceflow Aesthetic with Organic Lush Backdrop) */}
-        <div className="relative rounded-[32px] sm:rounded-[40px] overflow-hidden shadow-2xl border border-slate-200/80 bg-slate-950">
+        <motion.div 
+          initial={{ opacity: 0, y: 44, scale: 0.97 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ delay: 1.4, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+          className="relative rounded-[32px] sm:rounded-[40px] overflow-hidden shadow-2xl border border-slate-200/80 bg-slate-950"
+        >
           
           {/* Lush Green Landscape Photography Background */}
           <div className="absolute inset-0 z-0">
@@ -440,7 +515,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
             </div>
 
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>
