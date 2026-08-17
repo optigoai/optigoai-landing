@@ -19,24 +19,23 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGetStarted, onOpenVideoGui
   }, []);
 
   const navLinks = [
+    { label: 'Impact', href: '#roi-results' },
     { label: 'How It Works', href: '#how-it-works' },
     { label: 'Features', href: '#features' },
-    { label: 'For Businesses', href: '#for-businesses' },
     { label: 'AI Demo', href: '#ai-cmo-demo' },
-    { label: 'Results', href: '#roi-results' },
+    { label: 'For Businesses', href: '#for-businesses' },
     { label: 'FAQ', href: '#faq' },
   ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 sm:px-8 pt-4 sm:pt-6 transition-all duration-300 pointer-events-none">
-      
+
       {/* Dynamic Voiceflow-style Morphing Navbar Container */}
-      <div 
-        className={`pointer-events-auto transition-all duration-300 flex items-center justify-between ${
-          isScrolled 
-            ? 'w-full max-w-6xl rounded-full glass-nav shadow-lg shadow-black/5 border border-slate-200/80 px-6 sm:px-8 py-3' 
+      <div
+        className={`pointer-events-auto transition-all duration-300 flex items-center justify-between ${isScrolled
+            ? 'w-full max-w-6xl rounded-full glass-nav shadow-lg shadow-black/5 border border-slate-200/80 px-6 sm:px-8 py-3'
             : 'w-full max-w-7xl px-2 sm:px-6 py-1'
-        }`}
+          }`}
       >
         {/* Left: OptigoAI Logo */}
         <div className="flex items-center shrink-0 mr-4 sm:mr-8">
@@ -49,12 +48,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGetStarted, onOpenVideoGui
 
         {/* Center: Navigation Links */}
         <nav className="hidden lg:flex items-center justify-center flex-1 px-4">
-          <div 
-            className={`transition-all duration-300 flex items-center justify-center gap-6 xl:gap-8 whitespace-nowrap ${
-              isScrolled 
-                ? 'bg-transparent px-0 py-0' 
+          <div
+            className={`transition-all duration-300 flex items-center justify-center gap-6 xl:gap-8 whitespace-nowrap ${isScrolled
+                ? 'bg-transparent px-0 py-0'
                 : 'bg-black/[0.03] backdrop-blur-sm border border-black/[0.04] px-8 py-2.5 rounded-full shadow-xs'
-            }`}
+              }`}
           >
             {navLinks.map((link) => (
               <a
@@ -78,7 +76,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGetStarted, onOpenVideoGui
             <Video className="w-3.5 h-3.5 text-blue-600 shrink-0" />
             <span>Video Guide</span>
           </button>
-          
+
           <button
             onClick={onOpenGetStarted}
             className="flex items-center gap-1.5 px-5 py-2.5 text-xs sm:text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-full shadow-md shadow-blue-600/20 hover:shadow-lg hover:shadow-blue-600/30 transition-all group cursor-pointer whitespace-nowrap"
