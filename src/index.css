@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-serif: 'Newsreader', Georgia, Cambria, 'Times New Roman', serif;
+    --font-display: 'Instrument Serif', Georgia, serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FAF9F6;
+    color: #0F172A;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.font-serif-heading {
+  font-family: 'Newsreader', Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.font-display-serif {
+  font-family: 'Instrument Serif', Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+.font-sans-ui {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Glassmorphism & Modern UI utilities */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.03);
+}
+
+.glass-card-dark {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+}
+
+/* Subtle grid background pattern */
+.bg-subtle-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+}
+
+.bg-dot-grid {
+  background-image: radial-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Glowing badge and radial animation */
+.radial-engine-ring {
+  background: conic-gradient(from 0deg, #3B82F6, #10B981, #6366F1, #3B82F6);
+  animation: rotateEngine 20s linear infinite;
+}
+
+@keyframes rotateEngine {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pulsing highlight */
+.pulse-glow {
+  box-shadow: 0 0 25px rgba(37, 99, 235, 0.25);
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
