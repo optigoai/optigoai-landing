@@ -65,15 +65,35 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
 
   return (
     <section className="relative pt-36 sm:pt-44 md:pt-48 pb-20 sm:pb-28 overflow-hidden">
+      
       {/* Background soft ambient glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[900px] h-[400px] bg-gradient-to-tr from-blue-100/50 via-emerald-50/40 to-indigo-100/40 blur-3xl -z-10 pointer-events-none rounded-full" />
       <div className="absolute top-10 left-10 w-72 h-72 bg-blue-50/60 rounded-full blur-2xl -z-10" />
       <div className="absolute top-40 right-10 w-80 h-80 bg-emerald-50/60 rounded-full blur-2xl -z-10" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Top Centered Header Content */}
-        <div className="text-center max-w-4xl mx-auto mb-14 sm:mb-18">
+        <div className="text-center max-w-4xl mx-auto mb-14 sm:mb-18 relative z-10">
+
+          {/* Semi-Circular Ambient Dome Gradient Originating Directly from the Top of the Bottom Showcase Box */}
+          <div className="absolute left-1/2 -translate-x-1/2 -bottom-14 sm:-bottom-18 md:-bottom-20 w-[140vw] sm:w-[115vw] max-w-[1450px] h-[650px] sm:h-[800px] md:h-[950px] pointer-events-none -z-10">
+            {/* Outer Broad Arch */}
+            <div 
+              className="w-full h-full rounded-t-[1200px] blur-3xl opacity-90"
+              style={{
+                background: 'radial-gradient(ellipse 95% 90% at 50% 100%, rgba(59, 130, 246, 0.42) 0%, rgba(99, 102, 241, 0.28) 35%, rgba(147, 197, 253, 0.20) 65%, rgba(219, 234, 254, 0.08) 85%, transparent 100%)'
+              }}
+            />
+            {/* Inner Vibrant Core */}
+            <div 
+              className="absolute inset-x-[8%] bottom-0 h-[90%] rounded-t-[900px] blur-2xl opacity-95"
+              style={{
+                background: 'radial-gradient(ellipse 85% 80% at 50% 100%, rgba(37, 99, 235, 0.52) 0%, rgba(56, 189, 248, 0.38) 40%, rgba(147, 197, 253, 0.18) 75%, transparent 90%)'
+              }}
+            />
+          </div>
+
           {/* Small Badge - Clean Dot Indicator */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 text-white text-xs font-semibold uppercase tracking-wider mb-6 shadow-sm border border-slate-700/60 hover:border-slate-500 transition-colors">
             <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
