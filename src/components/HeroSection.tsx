@@ -205,7 +205,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
             transition={{ delay: 1.25, duration: 0.5 }}
             className="flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-500 font-medium"
           >
-            <ShieldCheck className="w-4 h-4 text-emerald-600" />
             <span>Built for small and growing businesses. No marketing degree required.</span>
           </motion.div>
         </div>
@@ -237,7 +236,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
             <div className="flex flex-wrap items-center justify-between gap-4 pb-6 sm:pb-8 border-b border-white/15 mb-8 sm:mb-10">
               <div className="flex items-center gap-3">
                 <span className="text-white text-xs sm:text-sm font-semibold tracking-wide">
-                  OptigoAI Autonomous Growth Engine
+                  OptigoAI Autonomous Growth Analysis
                 </span>
               </div>
 

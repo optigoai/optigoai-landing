@@ -45,21 +45,21 @@ export const Footer: React.FC<FooterProps> = ({ onOpenGetStarted, onOpenVideoGui
               </div>
             </div>
 
-            {/* Col 3: Platform */}
+            {/* Col 3: Product / Sections */}
             <div>
               <h4 className="font-bold text-slate-900 text-xs uppercase tracking-wider mb-4">
-                Platform
+                Product
               </h4>
               <ul className="space-y-2.5 text-xs text-slate-600 font-medium">
-                <li><a href="#features" className="hover:text-slate-950 transition-colors">Google Business AI</a></li>
-                <li><a href="#features" className="hover:text-slate-950 transition-colors">Review Auto-Responder</a></li>
-                <li><a href="#features" className="hover:text-slate-950 transition-colors">AI Creative Studio</a></li>
-                <li><a href="#features" className="hover:text-slate-950 transition-colors">Local SEO 3-Pack</a></li>
-                <li><a href="#features" className="hover:text-slate-950 transition-colors">Competitor Radar</a></li>
+                <li><a href="#roi-results" className="hover:text-slate-950 transition-colors">Proven Impact</a></li>
+                <li><a href="#for-businesses" className="hover:text-slate-950 transition-colors">For Businesses</a></li>
+                <li><a href="#how-it-works" className="hover:text-slate-950 transition-colors">How It Works</a></li>
+                <li><a href="#ai-cmo-demo" className="hover:text-slate-950 transition-colors">Live AI Demo</a></li>
+                <li><a href="#why-optigo" className="hover:text-slate-950 transition-colors">Why OptigoAI</a></li>
               </ul>
             </div>
 
-            {/* Col 4: Solutions */}
+            {/* Col 4: Industries */}
             <div>
               <h4 className="font-bold text-slate-900 text-xs uppercase tracking-wider mb-4">
                 Industries
@@ -86,21 +86,21 @@ export const Footer: React.FC<FooterProps> = ({ onOpenGetStarted, onOpenVideoGui
                   </button>
                 </li>
                 <li><button onClick={onOpenGetStarted} className="hover:text-slate-950 transition-colors text-left cursor-pointer">Free Marketing Audit</button></li>
-                <li><a href="#roi-results" className="hover:text-slate-950 transition-colors">ROI Calculator</a></li>
+                <li><a href="#roi-results" className="hover:text-slate-950 transition-colors">Growth Tracker</a></li>
                 <li><a href="#faq" className="hover:text-slate-950 transition-colors">Help & FAQ</a></li>
               </ul>
             </div>
 
-            {/* Col 6: Company & Legal */}
+            {/* Col 6: Company */}
             <div>
               <h4 className="font-bold text-slate-900 text-xs uppercase tracking-wider mb-4">
                 Company
               </h4>
               <ul className="space-y-2.5 text-xs text-slate-600 font-medium">
                 <li><button onClick={onOpenGetStarted} className="hover:text-slate-950 transition-colors cursor-pointer">About Us</button></li>
-                <li><a href="#" className="hover:text-slate-950 transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-slate-950 transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-slate-950 transition-colors">Security Overview</a></li>
+                <li><a href="#why-optigo" className="hover:text-slate-950 transition-colors">Who It's For</a></li>
+                <li><a href="#faq" className="hover:text-slate-950 transition-colors">Security & Privacy</a></li>
+                <li><button onClick={onOpenGetStarted} className="hover:text-slate-950 transition-colors cursor-pointer">Get Started Free</button></li>
               </ul>
             </div>
 

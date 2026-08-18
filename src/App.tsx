@@ -6,7 +6,6 @@ import { ROIResults } from './components/ROIResults';
 import { BuiltForSmallBusinesses } from './components/BuiltForSmallBusinesses';
 import { HowItWorks } from './components/HowItWorks';
 import { AICMOExample } from './components/AICMOExample';
-import { ActionFirstMarketing } from './components/ActionFirstMarketing';
 import { WhyOptigoAI } from './components/WhyOptigoAI';
 import { FAQSection } from './components/FAQSection';
 import { CTASection } from './components/CTASection';
@@ -66,11 +65,6 @@ export function App() {
         <AICMOExample
           onOpenGetStarted={openGetStarted}
           onOpenVideoGuide={openVideoGuide}
-        />
-
-        {/* 9: Action-First Marketing */}
-        <ActionFirstMarketing
-          onOpenGetStarted={openGetStarted}
         />
 
         {/* 14 & 15: Who is OptigoAI for? & Why OptigoAI? Matrix */}

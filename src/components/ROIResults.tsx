@@ -8,10 +8,10 @@ interface ROIResultsProps {
 
 export const ROIResults: React.FC<ROIResultsProps> = ({ onOpenGetStarted }) => {
   const trackingMetrics = [
-    { name: 'Search Visibility', value: '+184%', desc: 'Appear in top 3 Google local map searches.' },
-    { name: 'Customer Interactions', value: '+148%', desc: 'Phone calls, direction requests, website clicks.' },
-    { name: 'Review Score', value: '4.9 ★', desc: '100% verified AI responses within minutes.' },
-    { name: 'Hours Saved', value: '28h/mo', desc: 'Automated content, posting, and reputation.' },
+    { name: 'Google Map Rank', value: 'Rank #1', desc: 'Jumped from position #10 to #1 in local search.' },
+    { name: 'Customer Actions', value: '+148%', desc: 'Direct phone calls, directions, and website visits.' },
+    { name: 'Map Pack Placement', value: 'Top 3', desc: 'Permanent top placement in Google Places 3-Pack.' },
+    { name: 'Hours Saved', value: '28h/mo', desc: 'Autonomous keyword SEO, posts, and review replies.' },
   ];
 
   return (
@@ -58,60 +58,84 @@ export const ROIResults: React.FC<ROIResultsProps> = ({ onOpenGetStarted }) => {
             </div>
           </div>
 
-          {/* Generated Screen Image Container */}
-          <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-lg bg-slate-50 p-2 sm:p-4 mb-8">
-            <img
-              src="/assets/google_rating_screen.jpg"
-              alt="Google Business Profile rating screen before and after using OptigoAI"
-              className="w-full h-auto rounded-xl object-contain shadow-sm"
-            />
-          </div>
+          {/* Side-by-Side Before vs After Showcase Grid (Always 2 columns on Mobile & Desktop, compact desktop scale) */}
+          <div className="max-w-3xl lg:max-w-4xl mx-auto grid grid-cols-2 gap-3 sm:gap-6 md:gap-8 mb-8">
 
-          {/* Comparison Points Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Before Box */}
-            <div className="p-5 rounded-2xl bg-red-50/50 border border-red-200/80">
-              <div className="flex items-center justify-between mb-3">
-                <h4 className="text-sm font-bold text-red-950">BEFORE OPTIGOAI</h4>
-                <span className="text-xs font-bold text-red-600 bg-red-100 px-2 py-0.5 rounded">Dormant Profile</span>
+            {/* Column 1: BEFORE */}
+            <div className="flex flex-col bg-white rounded-2xl sm:rounded-3xl p-3 sm:p-5 md:p-6">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 pb-2 sm:pb-3 mb-2.5 sm:mb-4">
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-red-500 shrink-0" />
+                  <span className="font-bold text-[10px] sm:text-xs md:text-sm tracking-wide text-red-950 uppercase truncate">
+                    BEFORE
+                  </span>
+                </div>
+
               </div>
-              <ul className="space-y-2 text-xs text-slate-700">
-                <li className="flex items-center gap-2">
-                  <span className="text-red-500 font-bold">✕</span>
-                  <span>3.8 Star rating with 14 unreplied customer complaints</span>
+
+              {/* Before Image (Clean Transparent Phone) */}
+              <div className="my-2 sm:my-4 flex justify-center items-center">
+                <img
+                  src="/assets/rating-before.png"
+                  alt="Google Business Profile before OptigoAI"
+                  className="max-h-[260px] sm:max-h-[360px] md:max-h-[400px] w-auto object-contain drop-shadow-md"
+                />
+              </div>
+
+              {/* Before Highlights */}
+              <ul className="space-y-1.5 sm:space-y-2 text-[10px] sm:text-xs text-slate-700 mt-auto pt-1">
+                <li className="flex items-start gap-1.5 sm:gap-2">
+                  <span className="text-red-500 font-bold text-xs sm:text-sm leading-none mt-0.5 shrink-0">✕</span>
+                  <span><strong>Rank #10</strong> for "best family restaurants"</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-red-500 font-bold">✕</span>
-                  <span>Zero Google Posts published in past 6 months</span>
+                <li className="flex items-start gap-1.5 sm:gap-2">
+                  <span className="text-red-500 font-bold text-xs sm:text-sm leading-none mt-0.5 shrink-0">✕</span>
+                  <span>Buried below neighborhood competitors</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-red-500 font-bold">✕</span>
-                  <span>Ranked #8 in local map pack behind neighborhood competitors</span>
+                <li className="flex items-start gap-1.5 sm:gap-2">
+                  <span className="text-red-500 font-bold text-xs sm:text-sm leading-none mt-0.5 shrink-0">✕</span>
+                  <span>Missed high-intent local customer searches</span>
                 </li>
               </ul>
             </div>
 
-            {/* After Box */}
-            <div className="p-5 rounded-2xl bg-emerald-50/50 border border-emerald-200/80">
-              <div className="flex items-center justify-between mb-3">
-                <h4 className="text-sm font-bold text-emerald-950">AFTER OPTIGOAI (60 DAYS)</h4>
-                <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">Top 3 Map Pack</span>
+            {/* Column 2: AFTER */}
+            <div className="flex flex-col bg-white rounded-2xl sm:rounded-3xl p-3 sm:p-5 md:p-6 relative">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 pb-2 sm:pb-3 mb-2.5 sm:mb-4">
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+                  <span className="font-bold text-[10px] sm:text-xs md:text-sm tracking-wide text-emerald-950 uppercase truncate">
+                    AFTER OPTIGOAI
+                  </span>
+                </div>
               </div>
-              <ul className="space-y-2 text-xs text-slate-700">
-                <li className="flex items-center gap-2">
-                  <span className="text-emerald-600 font-bold">✓</span>
-                  <span>4.9 Star rating with 284 reviews and 100% AI reply rate</span>
+
+              {/* After Image (Clean Transparent Phone) */}
+              <div className="my-2 sm:my-4 flex justify-center items-center">
+                <img
+                  src="/assets/rating-after.png"
+                  alt="Google Business Profile after OptigoAI"
+                  className="max-h-[260px] sm:max-h-[360px] md:max-h-[400px] w-auto object-contain drop-shadow-md"
+                />
+              </div>
+
+              {/* After Highlights */}
+              <ul className="space-y-1.5 sm:space-y-2 text-[10px] sm:text-xs text-slate-700 mt-auto pt-1">
+                <li className="flex items-start gap-1.5 sm:gap-2">
+                  <span className="text-emerald-600 font-bold text-xs sm:text-sm leading-none mt-0.5 shrink-0">✓</span>
+                  <span><strong>#1 Top Spot</strong> for local keyword searches</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-emerald-600 font-bold">✓</span>
-                  <span>+148% increase in customer phone calls and direction requests</span>
+                <li className="flex items-start gap-1.5 sm:gap-2">
+                  <span className="text-emerald-600 font-bold text-xs sm:text-sm leading-none mt-0.5 shrink-0">✓</span>
+                  <span>Outranked all area rivals in Google 3-Pack</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-emerald-600 font-bold">✓</span>
-                  <span>Automated weekly promo posts scheduled directly to Google & Instagram</span>
+                <li className="flex items-start gap-1.5 sm:gap-2">
+                  <span className="text-emerald-600 font-bold text-xs sm:text-sm leading-none mt-0.5 shrink-0">✓</span>
+                  <span><strong>+148% surge</strong> in calls & direction requests</span>
                 </li>
               </ul>
             </div>
+
           </div>
         </motion.div>
 

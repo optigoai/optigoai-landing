@@ -39,7 +39,7 @@ export const WhyOptigoAI: React.FC<WhyOptigoAIProps> = ({ onOpenGetStarted }) =>
   ];
 
   return (
-    <section className="py-20 sm:py-28 bg-[#FAF9F6] relative">
+    <section id="why-optigo" className="py-20 sm:py-28 bg-[#FAF9F6] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Part 1: Who Is OptigoAI For? */}

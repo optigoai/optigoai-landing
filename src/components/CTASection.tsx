@@ -9,14 +9,14 @@ interface CTASectionProps {
 export const CTASection: React.FC<CTASectionProps> = ({ onOpenGetStarted }) => {
   return (
     <section className="py-20 sm:py-28 bg-[#FAF9F6] relative overflow-hidden">
-      
+
       {/* Background Soft Ambient Glows */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-gradient-to-r from-emerald-100/40 via-blue-100/30 to-teal-100/40 blur-3xl pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Main Light-Themed Luxury CTA Card */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 44, scale: 0.97 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, margin: "-60px" }}
@@ -28,11 +28,10 @@ export const CTASection: React.FC<CTASectionProps> = ({ onOpenGetStarted }) => {
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10 max-w-3xl mx-auto">
-            
+
             {/* Small Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-emerald-800 text-xs font-bold uppercase tracking-wider mb-6 border border-emerald-200/80 shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Get Started in 60 Seconds</span>
+              <span>Start Now</span>
             </div>
 
             {/* Headline */}
@@ -69,10 +68,10 @@ export const CTASection: React.FC<CTASectionProps> = ({ onOpenGetStarted }) => {
             {/* Trust Badges under CTA */}
             <div className="flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slate-600 font-medium">
               <span className="flex items-center gap-1.5 bg-white/80 px-3 py-1.5 rounded-full border border-slate-200/60 shadow-xs">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Free 14-day growth trial
+                <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Easy Onboarding
               </span>
               <span className="flex items-center gap-1.5 bg-white/80 px-3 py-1.5 rounded-full border border-slate-200/60 shadow-xs">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" /> No credit card required
+                <CheckCircle2 className="w-4 h-4 text-emerald-600" /> AI Expert Support
               </span>
               <span className="flex items-center gap-1.5 bg-white/80 px-3 py-1.5 rounded-full border border-slate-200/60 shadow-xs">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Instant Google Profile sync
