@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, Play, CheckCircle2, TrendingUp, Zap, Star, ShieldCheck, Send, Mic, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, Play, CheckCircle2, TrendingUp, Zap, Star, Send, Mic, ArrowUpRight } from 'lucide-react';
 import { motion, type Variants } from 'framer-motion';
 
 interface HeroSectionProps {
