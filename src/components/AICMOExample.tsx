@@ -130,58 +130,62 @@ export const AICMOExample: React.FC<AICMOExampleProps> = ({ onOpenGetStarted, on
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-4xl mx-auto bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl"
+          className="max-w-4xl mx-auto bg-white rounded-3xl p-3.5 sm:p-8 md:p-10 border border-slate-200 shadow-xl"
         >
           
           {/* User Message Bubble */}
-          <div className="flex items-start justify-end gap-3 mb-6">
-            <div className="bg-blue-600 text-white px-5 py-3.5 rounded-2xl rounded-tr-sm shadow-md font-medium text-sm sm:text-base max-w-lg">
+          <div className="flex items-start justify-end gap-2 sm:gap-3 mb-4 sm:mb-6">
+            <div className="bg-blue-600 text-white px-3.5 sm:px-5 py-2.5 sm:py-3.5 rounded-2xl rounded-tr-sm shadow-md font-medium text-xs sm:text-base max-w-lg">
               "{current.query}"
             </div>
-            <div className="w-9 h-9 rounded-full bg-slate-200 flex items-center justify-center text-slate-700 font-bold text-xs shrink-0">
+            <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-slate-200 flex items-center justify-center text-slate-700 font-bold text-[10px] sm:text-xs shrink-0 mt-0.5">
               You
             </div>
           </div>
 
           {/* AI CMO Response Bubble */}
-          <div className="flex items-start gap-3 sm:gap-4 mb-8">
-            <div className="w-10 h-10 rounded-2xl bg-slate-900 text-white flex items-center justify-center shadow-md shrink-0 mt-1">
-              <Cpu className="w-5 h-5 text-blue-400" />
+          <div className="flex items-start gap-2 sm:gap-4 mb-6 sm:mb-8">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-white border border-slate-200 p-1 flex items-center justify-center shadow-xs shrink-0 mt-0.5">
+              <img 
+                src="/assets/optigoai-logo-removebg.png" 
+                alt="OptigoAI Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
 
-            <div className="flex-1 bg-slate-50 rounded-2xl p-5 sm:p-7 border border-slate-200/80 space-y-6">
+            <div className="flex-1 bg-slate-50/90 rounded-2xl p-3.5 sm:p-6 md:p-7 border border-slate-200/80 space-y-4 sm:space-y-6 min-w-0">
               
               <div>
-                <div className="flex items-center justify-between gap-2 mb-2">
-                  <span className="text-xs font-bold text-slate-900">OptigoAI Marketing Manager</span>
-                  <span className="text-[11px] font-mono text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                <div className="flex items-center justify-between gap-2 mb-1.5 sm:mb-2">
+                  <span className="text-[11px] sm:text-xs font-bold text-slate-900">OptigoAI Marketing Manager</span>
+                  <span className="text-[10px] sm:text-[11px] font-mono text-emerald-700 bg-emerald-100/80 px-2 py-0.5 rounded-md border border-emerald-300/80 font-bold shrink-0">
                     Confidence: 98%
                   </span>
                 </div>
-                <p className="text-sm sm:text-base font-semibold text-slate-900 leading-snug">
+                <p className="text-xs sm:text-sm md:text-base font-semibold text-slate-900 leading-snug">
                   Based on your current business presence, I found 3 high-impact opportunities:
                 </p>
               </div>
 
               {/* 3 Opportunities */}
-              <div className="space-y-3">
+              <div className="space-y-2 sm:space-y-3">
                 {current.opportunities.map((opp) => (
-                  <div key={opp.num} className="p-3.5 bg-white rounded-xl border border-slate-200/80 flex items-start gap-3 shadow-xs">
-                    <span className="w-6 h-6 rounded-full bg-blue-50 text-blue-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                  <div key={opp.num} className="p-2.5 sm:p-3.5 bg-white rounded-xl border border-slate-200/80 flex items-start gap-2.5 sm:gap-3 shadow-xs">
+                    <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-blue-50 text-blue-700 font-bold text-[10px] sm:text-xs flex items-center justify-center shrink-0 mt-0.5">
                       {opp.num}
                     </span>
-                    <div>
+                    <div className="min-w-0">
                       <h4 className="text-xs sm:text-sm font-bold text-slate-900">{opp.title}</h4>
-                      <p className="text-xs text-slate-600 mt-0.5">{opp.desc}</p>
+                      <p className="text-[11px] sm:text-xs text-slate-600 mt-0.5 leading-relaxed">{opp.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
               {/* Recommended Next Steps Checklist */}
-              <div className="pt-2">
-                <p className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">
-                  Recommended Next Steps (1-Click Execution):
+              <div className="pt-1 sm:pt-2">
+                <p className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-500 mb-2.5 sm:mb-3">
+                  RECOMMENDED NEXT STEPS (1-CLICK EXECUTION):
                 </p>
                 <div className="space-y-2">
                   {current.recommendedSteps.map((step) => {
@@ -190,26 +194,26 @@ export const AICMOExample: React.FC<AICMOExampleProps> = ({ onOpenGetStarted, on
                       <div
                         key={step.id}
                         onClick={() => handleExecute(step.id)}
-                        className={`p-3 rounded-xl border transition-all flex items-center justify-between gap-3 cursor-pointer ${
+                        className={`p-2.5 sm:p-3 rounded-xl border transition-all flex items-center justify-between gap-2 sm:gap-3 cursor-pointer ${
                           isDone 
                             ? 'bg-emerald-50 border-emerald-300 text-emerald-900' 
                             : 'bg-white border-slate-200 hover:border-slate-300 text-slate-800'
                         }`}
                       >
-                        <div className="flex items-center gap-2.5">
-                          <div className={`w-5 h-5 rounded-full flex items-center justify-center text-xs ${
+                        <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
+                          <div className={`w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center text-xs shrink-0 ${
                             isDone ? 'bg-emerald-600 text-white' : 'border border-slate-300 text-transparent'
                           }`}>
-                            <Check className="w-3.5 h-3.5" />
+                            <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                           </div>
-                          <div>
-                            <span className="text-xs sm:text-sm font-semibold">{step.label}</span>
-                            <span className="text-[11px] text-slate-500 block">{step.detail}</span>
+                          <div className="min-w-0">
+                            <span className="text-xs sm:text-sm font-semibold block truncate leading-tight">{step.label}</span>
+                            <span className="text-[10px] sm:text-[11px] text-slate-500 block truncate">{step.detail}</span>
                           </div>
                         </div>
 
                         <button 
-                          className={`text-xs px-3 py-1.5 rounded-lg font-bold transition ${
+                          className={`text-[10px] sm:text-xs px-2.5 sm:px-3 py-1.5 rounded-lg font-bold transition shrink-0 whitespace-nowrap ${
                             isDone 
                               ? 'bg-emerald-600 text-white' 
                               : 'bg-slate-900 text-white hover:bg-slate-800'
@@ -224,7 +228,7 @@ export const AICMOExample: React.FC<AICMOExampleProps> = ({ onOpenGetStarted, on
               </div>
 
               {/* Closing Callout */}
-              <div className="pt-3 border-t border-slate-200 flex items-center justify-between text-xs text-slate-600">
+              <div className="pt-2.5 sm:pt-3 border-t border-slate-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-[11px] sm:text-xs text-slate-600">
                 <span className="font-medium text-emerald-700">✓ {current.closingNote}</span>
                 <span className="text-[10px] text-slate-400">Execution time: &lt; 5s</span>
               </div>
@@ -233,17 +237,17 @@ export const AICMOExample: React.FC<AICMOExampleProps> = ({ onOpenGetStarted, on
           </div>
 
           {/* Bottom Call to Action */}
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-3">
             <button
               onClick={onOpenGetStarted}
-              className="w-full sm:w-auto px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-full shadow-lg shadow-blue-600/20 transition flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full sm:w-auto px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-semibold rounded-full shadow-lg shadow-blue-600/20 transition flex items-center justify-center gap-2 cursor-pointer"
             >
               <span>Try OptigoAI Free</span>
               <ArrowRight className="w-4 h-4" />
             </button>
             <button
               onClick={onOpenVideoGuide}
-              className="w-full sm:w-auto px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-medium rounded-full transition flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full sm:w-auto px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs sm:text-sm font-medium rounded-full transition flex items-center justify-center gap-2 cursor-pointer"
             >
               <Play className="w-3.5 h-3.5 fill-slate-700" />
               <span>Watch AI CMO in Action</span>
