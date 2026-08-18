@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Cpu, Check, X, ShieldCheck, Zap, Clock, TrendingUp } from 'lucide-react';
+import { ArrowRight, Sparkles, Check, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface WhyOptigoAIProps {
