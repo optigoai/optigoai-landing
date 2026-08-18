@@ -6,7 +6,6 @@ import { ROIResults } from './components/ROIResults';
 import { BuiltForSmallBusinesses } from './components/BuiltForSmallBusinesses';
 import { HowItWorks } from './components/HowItWorks';
 import { AICMOExample } from './components/AICMOExample';
-import { WhyOptigoAI } from './components/WhyOptigoAI';
 import { FAQSection } from './components/FAQSection';
 import { CTASection } from './components/CTASection';
 import { Footer } from './components/Footer';
@@ -67,10 +66,6 @@ export function App() {
           onOpenVideoGuide={openVideoGuide}
         />
 
-        {/* 14 & 15: Who is OptigoAI for? & Why OptigoAI? Matrix */}
-        <WhyOptigoAI
-          onOpenGetStarted={openGetStarted}
-        />
 
         {/* 17 & 19: High Converting CTA Banner */}
         <CTASection

@@ -72,7 +72,12 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenGetStarted }) => {
               <div className="grid grid-cols-2 gap-2.5 bg-slate-50/80 p-3 rounded-2xl border border-slate-100 mb-5">
                 <div className="bg-white p-3 rounded-xl border border-slate-200/70 shadow-xs flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-base">📍</span>
+                    <svg className="w-4 h-4" viewBox="0 0 24 24">
+                      <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                      <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                      <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                      <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                    </svg>
                     <span className="w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700">
                       <Check className="w-2.5 h-2.5 stroke-[3]" />
                     </span>
@@ -83,7 +88,18 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenGetStarted }) => {
 
                 <div className="bg-white p-3 rounded-xl border border-slate-200/70 shadow-xs flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-base">📸</span>
+                    <svg className="w-4 h-4 rounded-sm" viewBox="0 0 24 24" fill="none">
+                      <rect width="24" height="24" rx="6" fill="url(#hiw-ig-grad)"/>
+                      <circle cx="12" cy="12" r="4.5" stroke="white" strokeWidth="2"/>
+                      <circle cx="18" cy="6" r="1.2" fill="white"/>
+                      <defs>
+                        <linearGradient id="hiw-ig-grad" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse">
+                          <stop stopColor="#F58529"/>
+                          <stop offset="0.5" stopColor="#DD2A7B"/>
+                          <stop offset="1" stopColor="#8134AF"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
                     <span className="w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700">
                       <Check className="w-2.5 h-2.5 stroke-[3]" />
                     </span>
@@ -94,7 +110,9 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenGetStarted }) => {
 
                 <div className="bg-white p-3 rounded-xl border border-slate-200/70 shadow-xs flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-base">💬</span>
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="#1877F2">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
                     <span className="w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700">
                       <Check className="w-2.5 h-2.5 stroke-[3]" />
                     </span>
@@ -105,7 +123,10 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenGetStarted }) => {
 
                 <div className="bg-white p-3 rounded-xl border border-slate-200/70 shadow-xs flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-base">🔍</span>
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                      <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#4285F4"/>
+                      <path d="M10 7v5l4-2.5L10 7z" fill="#34A853"/>
+                    </svg>
                     <span className="w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700">
                       <Check className="w-2.5 h-2.5 stroke-[3]" />
                     </span>
@@ -254,7 +275,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenGetStarted }) => {
             onClick={onOpenGetStarted}
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-md shadow-blue-600/25 transition-all cursor-pointer hover:scale-[1.02]"
           >
-            <span>Start Free 14-Day Trial</span>
+            <span>Start now</span>
             <ArrowRight className="w-4 h-4" />
           </button>
           <p className="text-xs text-slate-500 mt-3">

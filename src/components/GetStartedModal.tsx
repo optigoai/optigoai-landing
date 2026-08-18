@@ -35,7 +35,7 @@ export const GetStartedModal: React.FC<GetStartedModalProps> = ({ isOpen, onClos
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-200">
       <div className="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-200 relative">
-        
+
         {/* Close Button */}
         <button
           onClick={resetAndClose}
@@ -84,12 +84,11 @@ export const GetStartedModal: React.FC<GetStartedModalProps> = ({ isOpen, onClos
           </div>
         ) : (
           <div className="p-6 sm:p-8">
-            
+
             {/* Modal Header */}
             <div className="mb-6">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-[11px] font-bold uppercase tracking-wider mb-2 border border-blue-200">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>14-Day Free Growth Trial</span>
+                <span>Start Now </span>
               </div>
               <h3 className="font-serif-heading text-2xl sm:text-3xl text-slate-900 font-bold">
                 Get Started with OptigoAI
