@@ -93,33 +93,33 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
 
   return (
     <section className="relative pt-36 sm:pt-44 md:pt-48 pb-20 sm:pb-28 overflow-hidden">
-      
+
       {/* Background soft ambient glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[900px] h-[400px] bg-gradient-to-tr from-blue-100/50 via-emerald-50/40 to-indigo-100/40 blur-3xl -z-10 pointer-events-none rounded-full" />
       <div className="absolute top-10 left-10 w-72 h-72 bg-blue-50/60 rounded-full blur-2xl -z-10" />
       <div className="absolute top-40 right-10 w-80 h-80 bg-emerald-50/60 rounded-full blur-2xl -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Top Centered Header Content */}
         <div className="text-center max-w-4xl mx-auto mb-14 sm:mb-18 relative z-10">
 
           {/* Semi-Circular Ambient Dome Gradient Originating Directly from the Top of the Bottom Showcase Box */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             className="absolute left-1/2 -translate-x-1/2 -bottom-14 sm:-bottom-18 md:-bottom-20 w-[140vw] sm:w-[115vw] max-w-[1450px] h-[650px] sm:h-[800px] md:h-[950px] pointer-events-none -z-10"
           >
             {/* Outer Broad Arch */}
-            <div 
+            <div
               className="w-full h-full rounded-t-[1200px] blur-3xl opacity-90"
               style={{
                 background: 'radial-gradient(ellipse 95% 90% at 50% 100%, rgba(59, 130, 246, 0.42) 0%, rgba(99, 102, 241, 0.28) 35%, rgba(147, 197, 253, 0.20) 65%, rgba(219, 234, 254, 0.08) 85%, transparent 100%)'
               }}
             />
             {/* Inner Vibrant Core */}
-            <div 
+            <div
               className="absolute inset-x-[8%] bottom-0 h-[90%] rounded-t-[900px] blur-2xl opacity-95"
               style={{
                 background: 'radial-gradient(ellipse 85% 80% at 50% 100%, rgba(37, 99, 235, 0.52) 0%, rgba(56, 189, 248, 0.38) 40%, rgba(147, 197, 253, 0.18) 75%, transparent 90%)'
@@ -128,18 +128,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
           </motion.div>
 
           {/* Small Badge - Clean Dot Indicator */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 text-white text-xs font-semibold uppercase tracking-wider mb-6 shadow-sm border border-slate-700/60 hover:border-slate-500 transition-colors"
           >
-            <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
             <span>AI-POWERED MARKETING MANAGER</span>
           </motion.div>
 
           {/* Editorial Grand Headline with Letter/Word Boot Reveal Animation */}
-          <motion.h1 
+          <motion.h1
             variants={wordContainer}
             initial="hidden"
             animate="visible"
@@ -164,7 +163,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
           </motion.h1>
 
           {/* Subheadline - Enters smoothly after headline */}
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.85, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
@@ -174,7 +173,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
           </motion.p>
 
           {/* CTA Buttons - Enter after subheadline */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 18, scale: 0.97 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 1.05, duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
@@ -200,7 +199,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
           </motion.div>
 
           {/* Small Trust Note */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.25, duration: 0.5 }}
@@ -212,18 +211,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
         </div>
 
         {/* Hero Showcase Split Card (Voiceflow Aesthetic with Organic Lush Backdrop) */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 44, scale: 0.97 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ delay: 1.4, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
           className="relative rounded-[32px] sm:rounded-[40px] overflow-hidden shadow-2xl border border-slate-200/80 bg-slate-950"
         >
-          
+
           {/* Lush Green Landscape Photography Background */}
           <div className="absolute inset-0 z-0">
-            <img 
-              src="/assets/hero_lush_background.jpg" 
-              alt="Lush green organic landscape texture" 
+            <img
+              src="/assets/hero_lush_background.jpg"
+              alt="Lush green organic landscape texture"
               className="w-full h-full object-cover object-center opacity-85 saturate-120"
             />
             {/* Soft dark vignette gradients */}
@@ -233,16 +232,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
 
           {/* Content Over the Backdrop */}
           <div className="relative z-10 p-5 sm:p-8 md:p-12 lg:p-14">
-            
+
             {/* Top Bar inside Card */}
             <div className="flex flex-wrap items-center justify-between gap-4 pb-6 sm:pb-8 border-b border-white/15 mb-8 sm:mb-10">
               <div className="flex items-center gap-3">
-                <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" />
                 <span className="text-white text-xs sm:text-sm font-semibold tracking-wide">
                   OptigoAI Autonomous Growth Engine
-                </span>
-                <span className="text-[10px] font-bold text-emerald-300 bg-emerald-500/20 px-2 py-0.5 rounded-full border border-emerald-400/30">
-                  ACTIVE
                 </span>
               </div>
 
@@ -263,7 +258,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
 
             {/* 3-Column Layout Matching Voiceflow Reference (Case Study Card + Central Chat Agent + Live Action Meter) */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
-              
+
               {/* Left Column: Voiceflow-style Editorial Case Study Card */}
               <div className="lg:col-span-4 bg-white/95 backdrop-blur-xl rounded-2xl p-6 sm:p-7 shadow-xl border border-white/80 flex flex-col justify-between">
                 <div>
@@ -343,11 +338,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
                         <button
                           key={p.query}
                           onClick={() => handleSelectPrompt(idx)}
-                          className={`text-[11px] px-3 py-1.5 rounded-full transition-all whitespace-nowrap cursor-pointer ${
-                            activePromptIndex === idx
-                              ? 'bg-slate-900 text-white font-semibold shadow-xs'
-                              : 'bg-slate-100 text-slate-600 hover:bg-slate-200/80'
-                          }`}
+                          className={`text-[11px] px-3 py-1.5 rounded-full transition-all whitespace-nowrap cursor-pointer ${activePromptIndex === idx
+                            ? 'bg-slate-900 text-white font-semibold shadow-xs'
+                            : 'bg-slate-100 text-slate-600 hover:bg-slate-200/80'
+                            }`}
                         >
                           {p.query.split(' ')[0]} {p.query.split(' ')[1]}...
                         </button>
@@ -411,7 +405,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
                     <Mic className="w-3.5 h-3.5 text-slate-400" />
                     <span className="truncate">Ask OptigoAI anything...</span>
                   </div>
-                  <button 
+                  <button
                     onClick={onOpenGetStarted}
                     className="w-7 h-7 rounded-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center transition shrink-0 cursor-pointer shadow-xs"
                     title="Send"
@@ -440,17 +434,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
 
                   <div className="space-y-2">
                     {/* Action 1 */}
-                    <div 
+                    <div
                       onClick={() => toggleStep(1)}
-                      className={`p-2.5 rounded-xl border transition-all cursor-pointer flex items-start gap-2.5 ${
-                        completedSteps.includes(1) 
-                          ? 'bg-emerald-50/70 border-emerald-200' 
-                          : 'bg-white border-slate-200 hover:border-slate-300'
-                      }`}
+                      className={`p-2.5 rounded-xl border transition-all cursor-pointer flex items-start gap-2.5 ${completedSteps.includes(1)
+                        ? 'bg-emerald-50/70 border-emerald-200'
+                        : 'bg-white border-slate-200 hover:border-slate-300'
+                        }`}
                     >
-                      <div className={`w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
-                        completedSteps.includes(1) ? 'bg-emerald-600 text-white' : 'border border-slate-300'
-                      }`}>
+                      <div className={`w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${completedSteps.includes(1) ? 'bg-emerald-600 text-white' : 'border border-slate-300'
+                        }`}>
                         {completedSteps.includes(1) && <CheckCircle2 className="w-3 h-3" />}
                       </div>
                       <div className="flex-1 min-w-0">
@@ -460,17 +452,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
                     </div>
 
                     {/* Action 2 */}
-                    <div 
+                    <div
                       onClick={() => toggleStep(2)}
-                      className={`p-2.5 rounded-xl border transition-all cursor-pointer flex items-start gap-2.5 ${
-                        completedSteps.includes(2) 
-                          ? 'bg-emerald-50/70 border-emerald-200' 
-                          : 'bg-white border-slate-200 hover:border-slate-300'
-                      }`}
+                      className={`p-2.5 rounded-xl border transition-all cursor-pointer flex items-start gap-2.5 ${completedSteps.includes(2)
+                        ? 'bg-emerald-50/70 border-emerald-200'
+                        : 'bg-white border-slate-200 hover:border-slate-300'
+                        }`}
                     >
-                      <div className={`w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
-                        completedSteps.includes(2) ? 'bg-emerald-600 text-white' : 'border border-slate-300'
-                      }`}>
+                      <div className={`w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${completedSteps.includes(2) ? 'bg-emerald-600 text-white' : 'border border-slate-300'
+                        }`}>
                         {completedSteps.includes(2) && <CheckCircle2 className="w-3 h-3" />}
                       </div>
                       <div className="flex-1 min-w-0">
@@ -480,17 +470,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
                     </div>
 
                     {/* Action 3 */}
-                    <div 
+                    <div
                       onClick={() => toggleStep(3)}
-                      className={`p-2.5 rounded-xl border transition-all cursor-pointer flex items-start gap-2.5 ${
-                        completedSteps.includes(3) 
-                          ? 'bg-emerald-50/70 border-emerald-200' 
-                          : 'bg-white border-slate-200 hover:border-slate-300'
-                      }`}
+                      className={`p-2.5 rounded-xl border transition-all cursor-pointer flex items-start gap-2.5 ${completedSteps.includes(3)
+                        ? 'bg-emerald-50/70 border-emerald-200'
+                        : 'bg-white border-slate-200 hover:border-slate-300'
+                        }`}
                     >
-                      <div className={`w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
-                        completedSteps.includes(3) ? 'bg-emerald-600 text-white' : 'border border-slate-300'
-                      }`}>
+                      <div className={`w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${completedSteps.includes(3) ? 'bg-emerald-600 text-white' : 'border border-slate-300'
+                        }`}>
                         {completedSteps.includes(3) && <CheckCircle2 className="w-3 h-3" />}
                       </div>
                       <div className="flex-1 min-w-0">

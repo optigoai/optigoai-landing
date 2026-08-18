@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Brain, Lightbulb, PenTool, CheckCircle, TrendingUp, ArrowRight, Cpu } from 'lucide-react';
+import { Search, Brain, Lightbulb, PenTool, CheckCircle, TrendingUp, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface TrustValueStatementProps {
@@ -50,28 +50,26 @@ export const TrustValueStatement: React.FC<TrustValueStatementProps> = ({ onOpen
 
   return (
     <section className="py-20 sm:py-28 bg-white border-y border-slate-200/70 relative overflow-hidden">
-      
+
       {/* Background radial accent */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-r from-blue-50/50 via-emerald-50/30 to-purple-50/40 rounded-full blur-3xl -z-10 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Voiceflow Style Circular Context Engine Badge */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col items-center justify-center text-center mb-12 sm:mb-16"
         >
-          <div className="relative mb-6">
-            {/* Spinning decorative ring */}
-            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border border-blue-200/60 p-1 flex items-center justify-center relative">
-              <div className="absolute inset-0 rounded-full border border-dashed border-blue-400/40 animate-spin [animation-duration:30s]" />
-              <div className="w-full h-full rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-lg shadow-blue-600/20">
-                <Cpu className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
-              </div>
-            </div>
+          <div className="mb-6 flex justify-center">
+            <img
+              src="/assets/optigoai-logo-removebg.png"
+              alt="OptigoAI Logo"
+              className="h-14 sm:h-18 w-auto object-contain"
+            />
           </div>
 
           <p className="text-xs sm:text-sm font-semibold text-slate-500 uppercase tracking-widest mb-3">
@@ -89,7 +87,7 @@ export const TrustValueStatement: React.FC<TrustValueStatementProps> = ({ onOpen
 
           {/* High-Level Stats Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 pt-8 pb-12 w-full max-w-4xl border-y border-slate-100">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -102,7 +100,7 @@ export const TrustValueStatement: React.FC<TrustValueStatementProps> = ({ onOpen
               <p className="text-xs sm:text-sm font-medium text-slate-500">Average Customer Growth</p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -115,7 +113,7 @@ export const TrustValueStatement: React.FC<TrustValueStatementProps> = ({ onOpen
               <p className="text-xs sm:text-sm font-medium text-slate-500">Review Reply Coverage</p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -128,7 +126,7 @@ export const TrustValueStatement: React.FC<TrustValueStatementProps> = ({ onOpen
               <p className="text-xs sm:text-sm font-medium text-slate-500">Local Businesses Empowered</p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -144,7 +142,7 @@ export const TrustValueStatement: React.FC<TrustValueStatementProps> = ({ onOpen
         </motion.div>
 
         {/* Highlight 6-Step Workflow: ANALYZE -> UNDERSTAND -> RECOMMEND -> CREATE -> ACT -> IMPROVE */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 36 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
@@ -167,17 +165,15 @@ export const TrustValueStatement: React.FC<TrustValueStatementProps> = ({ onOpen
                 <button
                   key={step.title}
                   onClick={() => setActiveStep(index)}
-                  className={`p-4 rounded-2xl border text-left transition-all cursor-pointer flex flex-col justify-between ${
-                    isSelected
+                  className={`p-4 rounded-2xl border text-left transition-all cursor-pointer flex flex-col justify-between ${isSelected
                       ? 'bg-white border-blue-600 shadow-md ring-2 ring-blue-600/10'
                       : 'bg-white/60 border-slate-200/80 hover:bg-white hover:border-slate-300'
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-[11px] font-mono font-bold text-slate-400">0{index + 1}</span>
-                    <div className={`w-8 h-8 rounded-xl flex items-center justify-center ${
-                      isSelected ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'
-                    }`}>
+                    <div className={`w-8 h-8 rounded-xl flex items-center justify-center ${isSelected ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'
+                      }`}>
                       <Icon className="w-4 h-4" />
                     </div>
                   </div>

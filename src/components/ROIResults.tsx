@@ -1,5 +1,5 @@
 import React from 'react';
-import { TrendingUp, ArrowRight, ShieldCheck } from 'lucide-react';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface ROIResultsProps {
@@ -17,19 +17,15 @@ export const ROIResults: React.FC<ROIResultsProps> = ({ onOpenGetStarted }) => {
   return (
     <section id="roi-results" className="py-20 sm:py-28 bg-[#FAF9F6] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="text-center max-w-3xl mx-auto mb-14 sm:mb-18"
         >
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold uppercase tracking-wider mb-4 border border-emerald-200/80">
-            <TrendingUp className="w-3.5 h-3.5" />
-            <span>Proven Business Impact</span>
-          </div>
 
           <h2 className="font-serif-heading text-4xl sm:text-5xl md:text-6xl text-slate-900 tracking-tight leading-tight mb-4">
             Know Where Your <br className="hidden sm:inline" />
@@ -42,7 +38,7 @@ export const ROIResults: React.FC<ROIResultsProps> = ({ onOpenGetStarted }) => {
         </motion.div>
 
         {/* Real Screen Asset Showcase: Before vs After Google Business Rating */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, margin: "-60px" }}
@@ -64,8 +60,8 @@ export const ROIResults: React.FC<ROIResultsProps> = ({ onOpenGetStarted }) => {
 
           {/* Generated Screen Image Container */}
           <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-lg bg-slate-50 p-2 sm:p-4 mb-8">
-            <img 
-              src="/assets/google_rating_screen.jpg" 
+            <img
+              src="/assets/google_rating_screen.jpg"
               alt="Google Business Profile rating screen before and after using OptigoAI"
               className="w-full h-auto rounded-xl object-contain shadow-sm"
             />
@@ -144,7 +140,7 @@ export const ROIResults: React.FC<ROIResultsProps> = ({ onOpenGetStarted }) => {
         </div>
 
         {/* CTA Bar */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

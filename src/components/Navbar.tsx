@@ -20,10 +20,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGetStarted, onOpenVideoGui
 
   const navLinks = [
     { label: 'Impact', href: '#roi-results' },
-    { label: 'How It Works', href: '#how-it-works' },
-    { label: 'Features', href: '#features' },
-    { label: 'AI Demo', href: '#ai-cmo-demo' },
     { label: 'For Businesses', href: '#for-businesses' },
+    { label: 'How It Works', href: '#how-it-works' },
+    { label: 'AI Demo', href: '#ai-cmo-demo' },
     { label: 'FAQ', href: '#faq' },
   ];
 
@@ -43,7 +42,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGetStarted, onOpenVideoGui
             <img
               src="/assets/optigoai-logo-removebg.png"
               alt="OptigoAI"
-              className="h-8 sm:h-9 w-auto object-contain transition-transform group-hover:scale-105"
+              className="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105"
             />
           </a>
         </div>

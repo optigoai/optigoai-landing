@@ -30,7 +30,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenGetStarted, onOpenVideoGui
                 <img 
                   src="/assets/optigoai-logo-removebg.png" 
                   alt="OptigoAI" 
-                  className="h-8 sm:h-9 w-auto object-contain"
+                  className="h-12 sm:h-14 w-auto object-contain"
                 />
               </a>
 
