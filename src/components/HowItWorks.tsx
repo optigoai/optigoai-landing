@@ -246,52 +246,52 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenGetStarted }) => {
           </div>
 
           {/* Right Column: Warm Pastel Light-Themed Showcase Canvas */}
-          <div className="lg:col-span-7 bg-gradient-to-br from-[#F5F8F5] via-[#F8FAF8] to-[#EEF5F0] rounded-3xl p-6 sm:p-8 flex flex-col justify-between border border-emerald-900/10 shadow-sm relative overflow-hidden">
+          <div className="lg:col-span-7 bg-gradient-to-br from-[#F5F8F5] via-[#F8FAF8] to-[#EEF5F0] rounded-3xl p-4 sm:p-7 md:p-8 flex flex-col justify-between border border-emerald-900/10 shadow-sm relative overflow-hidden">
 
             {/* Subtle soft ambient light glow */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-100/50 rounded-full blur-3xl pointer-events-none" />
 
             <div className="relative z-10">
               {/* Header inside Mockup */}
-              <div className="flex items-center justify-between pb-4 border-b border-emerald-900/10 mb-5">
-                <div className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="text-xs font-bold text-slate-800">
+              <div className="flex items-center justify-between pb-3 sm:pb-4 border-b border-emerald-900/10 mb-4 sm:mb-5 gap-2">
+                <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
+                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+                  <span className="text-xs font-bold text-slate-800 truncate">
                     Optigo Growth Engine
                   </span>
                   <span className="text-xs text-slate-400">/</span>
-                  <span className="text-xs text-slate-600 font-medium">Step {currentStep.stepNum}</span>
+                  <span className="text-xs text-slate-600 font-medium whitespace-nowrap">Step {currentStep.stepNum}</span>
                 </div>
-                <span className="text-[11px] px-3 py-1 rounded-full bg-white text-emerald-800 font-bold border border-emerald-200/80 shadow-xs">
+                <span className="text-[10px] sm:text-[11px] px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white text-emerald-800 font-bold border border-emerald-200/80 shadow-xs shrink-0 whitespace-nowrap">
                   {currentStep.preview.badge}
                 </span>
               </div>
 
               {/* Optional Quote Callout */}
               {currentStep.preview.quote && (
-                <div className="bg-white/90 rounded-2xl p-4 border border-emerald-200/70 mb-4 text-xs sm:text-sm italic text-slate-700 shadow-xs">
+                <div className="bg-white/90 rounded-2xl p-3.5 sm:p-4 border border-emerald-200/70 mb-4 text-xs sm:text-sm italic text-slate-700 shadow-xs">
                   {currentStep.preview.quote}
                 </div>
               )}
 
-              {/* Items List - Crisp Light Cards */}
-              <div className="space-y-3 mb-6">
+              {/* Items List - Crisp Light Cards with Full Text Visibility */}
+              <div className="space-y-2.5 sm:space-y-3 mb-5 sm:mb-6">
                 {currentStep.preview.items.map((item, idx) => {
                   const ItemIcon = item.icon;
                   return (
                     <div
                       key={idx}
-                      className="bg-white hover:bg-slate-50/80 rounded-2xl p-3.5 sm:p-4 border border-slate-200/80 shadow-xs flex items-center justify-between gap-3 transition-all group"
+                      className="bg-white hover:bg-slate-50/80 rounded-2xl p-3 sm:p-4 border border-slate-200/80 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3 transition-all group"
                     >
-                      <div className="flex items-center gap-3 min-w-0">
-                        <div className={`w-9 h-9 rounded-xl ${item.bg || 'bg-slate-100'} flex items-center justify-center shrink-0 border border-black/5`}>
+                      <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+                        <div className={`w-8 h-8 sm:w-9 sm:h-9 rounded-xl ${item.bg || 'bg-slate-100'} flex items-center justify-center shrink-0 border border-black/5`}>
                           <ItemIcon className={`w-4 h-4 ${item.color}`} />
                         </div>
-                        <span className="text-xs sm:text-sm font-bold text-slate-900 truncate">{item.name}</span>
+                        <span className="text-xs sm:text-sm font-bold text-slate-900 leading-snug">{item.name}</span>
                       </div>
-                      <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 shrink-0 flex items-center gap-1">
-                        <Check className="w-3 h-3 text-emerald-600" />
-                        {item.status}
+                      <span className="text-[10px] sm:text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200 shrink-0 flex items-center gap-1 self-start sm:self-auto ml-10.5 sm:ml-0">
+                        <Check className="w-3 h-3 text-emerald-600 shrink-0" />
+                        <span>{item.status}</span>
                       </span>
                     </div>
                   );
@@ -300,10 +300,10 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenGetStarted }) => {
             </div>
 
             {/* Bottom Highlight inside Mockup */}
-            <div className="relative z-10 pt-4 border-t border-emerald-900/10 flex items-center justify-between text-xs text-slate-600">
+            <div className="relative z-10 pt-3 sm:pt-4 border-t border-emerald-900/10 flex items-center justify-between text-xs text-slate-600">
               <span className="flex items-center gap-2 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                {currentStep.preview.highlight}
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>{currentStep.preview.highlight}</span>
               </span>
             </div>
 
