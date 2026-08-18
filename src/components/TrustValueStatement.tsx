@@ -13,25 +13,25 @@ export const TrustValueStatement: React.FC<TrustValueStatementProps> = ({ onOpen
     {
       title: 'ANALYZE',
       icon: Search,
-      desc: 'Monitors Google Business, local rankings, competitor moves, and reviews 24/7.',
+      desc: 'Scans your Google profile, rankings, competitors & reviews 24/7.',
       color: 'from-blue-500 to-cyan-500',
     },
     {
       title: 'UNDERSTAND',
       icon: Brain,
-      desc: 'Learns your business model, customer demographics, and revenue drivers.',
+      desc: 'Learns your brand, customers, and what drives revenue.',
       color: 'from-cyan-500 to-teal-500',
     },
     {
       title: 'RECOMMEND',
       icon: Lightbulb,
-      desc: 'Filters out noise and gives you the top 3 highest-ROI actions for today.',
+      desc: 'Gives you the top 3 highest-impact actions daily.',
       color: 'from-teal-500 to-emerald-500',
     },
     {
       title: 'CREATE',
       icon: PenTool,
-      desc: 'Generates promotional copy, localized SEO posts, review replies, and creatives.',
+      desc: 'Generates posts, review replies, and marketing creatives.',
       color: 'from-emerald-500 to-amber-500',
     },
     {
@@ -43,7 +43,7 @@ export const TrustValueStatement: React.FC<TrustValueStatementProps> = ({ onOpen
     {
       title: 'IMPROVE',
       icon: TrendingUp,
-      desc: 'Measures foot traffic, phone calls, and revenue growth to get smarter over time.',
+      desc: 'Tracks calls, visits, and revenue — gets smarter over time.',
       color: 'from-orange-500 to-blue-500',
     },
   ];
@@ -82,7 +82,7 @@ export const TrustValueStatement: React.FC<TrustValueStatementProps> = ({ onOpen
           </h2>
 
           <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto font-normal leading-relaxed mb-8">
-            Most marketing tools show you numbers. OptigoAI turns those numbers into clear actions. It looks at your business, your online presence, customer reviews, search visibility, content, and competitors — then tells you what matters most and what you should do next.
+            Most tools show numbers. OptigoAI turns them into clear actions — telling you exactly what to do next.
           </p>
 
           {/* High-Level Stats Grid */}

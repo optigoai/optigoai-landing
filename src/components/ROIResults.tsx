@@ -33,7 +33,7 @@ export const ROIResults: React.FC<ROIResultsProps> = ({ onOpenGetStarted }) => {
           </h2>
 
           <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
-            OptigoAI connects your marketing activity with measurable business outcomes. Track search visibility, reviews, calls, and customer growth in real-time. Less guessing. More informed decisions.
+            Track search rankings, reviews, and customer growth in real-time. Less guessing, more results.
           </p>
         </motion.div>
 

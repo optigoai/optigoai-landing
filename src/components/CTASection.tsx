@@ -44,7 +44,7 @@ export const CTASection: React.FC<CTASectionProps> = ({ onOpenGetStarted }) => {
 
             {/* Subheadline & Text */}
             <p className="text-base sm:text-lg md:text-xl text-slate-600 font-normal leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto">
-              Let OptigoAI understand your business, find your hidden opportunities, and help you turn them into customer growth. You focus on running your business.
+              Let OptigoAI find your hidden opportunities and turn them into customers. You focus on running your business.
             </p>
 
             {/* CTA Buttons */}

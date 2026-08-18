@@ -35,7 +35,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenGetStarted, onOpenVideoGui
               </a>
 
               <p className="text-slate-600 text-xs sm:text-sm max-w-sm leading-relaxed font-normal">
-                Your AI Marketing Manager That Helps You Get More Customers. Autonomous Google SEO, 5-star review replies, and daily growth actions in 5 minutes a day.
+                Your AI Marketing Manager. Google SEO, 5-star review replies, and daily growth actions — in 5 minutes a day.
               </p>
 
               <div className="pt-1">

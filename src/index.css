@@ -13,7 +13,19 @@
     color: #0F172A;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
   }
+}
+
+/* iOS Safari WebKit GPU compositor fixes */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+[class*="backdrop-blur"] {
+  -webkit-backdrop-filter: inherit;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .font-serif-heading {

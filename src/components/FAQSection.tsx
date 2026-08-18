@@ -8,35 +8,35 @@ export const FAQSection: React.FC = () => {
   const faqs = [
     {
       q: 'What is OptigoAI?',
-      a: 'OptigoAI is an AI-powered marketing platform that acts as your dedicated AI Chief Marketing Officer. It connects to your business profiles (Google Business, Instagram, Facebook), analyzes your performance, identifies revenue opportunities, generates marketing copy and creatives, and gives you a prioritized daily action plan.',
+      a: 'OptigoAI is your AI marketing manager. It connects to your Google Business, Instagram, and Facebook — analyzes performance, finds opportunities, creates content, and gives you a daily action plan.',
     },
     {
       q: 'Is OptigoAI only for large businesses?',
-      a: 'No. OptigoAI is built specifically for small and medium-sized local businesses, retail stores, restaurants, clinics, gyms, salons, contractors, and startups that do not have a dedicated full-time marketing department.',
+      a: 'No. It’s built specifically for small local businesses — restaurants, salons, gyms, clinics, retailers, and startups without a dedicated marketing team.',
     },
     {
       q: 'Do I need marketing knowledge to use it?',
-      a: 'No. OptigoAI is designed from the ground up for busy owners. Instead of overwhelming you with 50 complex analytical graphs, it gives you 3 simple, plain-English action items every day with pre-composed copy ready to approve in 1 click.',
+      a: 'Not at all. Instead of 50 confusing charts, you get 3 plain-English actions daily with ready-to-approve copy in 1 click.',
     },
     {
       q: 'Can OptigoAI manage my Google Business Profile?',
-      a: 'Yes. With your official authorization, OptigoAI securely links to your Google Business Profile to track search views, optimize description keywords, schedule Google Posts, analyze local map pack rankings, and monitor customer reviews.',
+      a: 'Yes. OptigoAI links to your Google Business to track views, optimize keywords, schedule posts, and monitor reviews.',
     },
     {
       q: 'Can AI automatically reply to my customer reviews?',
-      a: 'Yes. OptigoAI analyzes all incoming reviews, detects customer sentiment, and drafts personalized, professional 5-star responses. Depending on your preference, you can review and approve replies before posting with 1 tap or enable auto-publishing.',
+      a: 'Yes. It detects sentiment and drafts personalized replies. You can approve with 1 tap or enable auto-publishing.',
     },
     {
       q: 'Can OptigoAI create social media content?',
-      a: 'Yes. OptigoAI generates complete marketing content including social media captions, weekly Google Posts, promotional announcements, limited-time offers, event promotions, and studio-grade visual graphics.',
+      a: 'Yes. It generates captions, Google Posts, promotional copy, event promos, and visual graphics — all ready to publish.',
     },
     {
       q: 'Can OptigoAI analyze my competitors?',
-      a: 'Yes. OptigoAI scans nearby local competitors within your territory, comparing their Google rankings, review scores, and posting frequencies to reveal strategic gaps and opportunities for your business.',
+      a: 'Yes. It scans nearby competitors’ rankings, reviews, and posting frequency to reveal gaps and opportunities for you.',
     },
     {
       q: 'Do I need multiple marketing tools?',
-      a: 'No. The goal of OptigoAI is to replace disjointed single-purpose tools (dashboard tools, SEO software, review platforms, and copywriting apps) into one unified, intelligent growth cockpit.',
+      a: 'No. OptigoAI replaces disjointed SEO, review, and copywriting tools with one unified growth platform.',
     },
   ];
 
@@ -60,7 +60,7 @@ export const FAQSection: React.FC = () => {
           </h2>
 
           <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
-            Have questions about how OptigoAI works for your business? Here are direct answers.
+            Quick answers about how OptigoAI works for your business.
           </p>
         </div>
 

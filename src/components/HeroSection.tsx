@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, Play, CheckCircle2, TrendingUp, Zap, Star, Send, Mic, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, Play } from 'lucide-react';
 import { motion, type Variants } from 'framer-motion';
 
 interface HeroSectionProps {
@@ -9,8 +9,6 @@ interface HeroSectionProps {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOpenVideoGuide }) => {
   const [activePromptIndex, setActivePromptIndex] = useState(0);
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [completedSteps, setCompletedSteps] = useState<number[]>([1]);
 
   const headlinePart1 = ["Your", "AI", "Marketing", "Manager"];
   const headlinePart2 = ["That", "Helps", "You", "Get", "More", "Customers."];
@@ -20,75 +18,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.07,
-        delayChildren: 0.12,
+        staggerChildren: 0.05,
+        delayChildren: 0.08,
       },
     },
   };
 
   const wordVariant: Variants = {
-    hidden: { opacity: 0, y: 26, filter: 'blur(6px)' },
+    hidden: { opacity: 0, y: 18 },
     visible: {
       opacity: 1,
       y: 0,
-      filter: 'blur(0px)',
-      transition: { duration: 0.55, ease: 'easeOut' },
+      transition: { duration: 0.45, ease: [0.16, 1, 0.3, 1] },
     },
-  };
-
-  const toggleStep = (step: number) => {
-    if (completedSteps.includes(step)) {
-      setCompletedSteps(completedSteps.filter(s => s !== step));
-    } else {
-      setCompletedSteps([...completedSteps, step]);
-    }
-  };
-
-  const prompts = [
-    {
-      query: "How can I get more customers this weekend?",
-      aiResponse: "I analyzed your Google Profile and local search trends. Here are 3 immediate actions for this weekend:",
-      actions: [
-        { label: "Reply to 5 pending Google reviews", impact: "SEO boost" },
-        { label: "Publish 'Weekend 20% Off Brunch' Google Post", impact: "+28 calls" },
-        { label: "Add missing keyword 'artisan specialty coffee'", impact: "+14% reach" }
-      ],
-      time: "2 mins ago",
-      growth: "+148% Local Actions"
-    },
-    {
-      query: "Why did my competitors rank higher on Google Maps?",
-      aiResponse: "Competitors within 2 miles added 12 new review responses and 2 weekly photos. Here is your fix:",
-      actions: [
-        { label: "Auto-generate 5-star review responses", impact: "Rank boost" },
-        { label: "Upload 3 geo-tagged store photos", impact: "Maps lift" },
-        { label: "Sync local business hours for holiday", impact: "Zero drop" }
-      ],
-      time: "Just now",
-      growth: "+210% Visibility"
-    },
-    {
-      query: "Draft a high-converting promotional post for Instagram",
-      aiResponse: "I prepared a localized photo creative and high-converting copy with clear calls to action:",
-      actions: [
-        { label: "Approve Instagram Feed & Story design", impact: "Ready" },
-        { label: "Schedule 1-click cross-post to Google", impact: "Instant" },
-        { label: "Track customer coupon redemptions", impact: "+35 visits" }
-      ],
-      time: "1 min ago",
-      growth: "+3.4x Engagement"
-    }
-  ];
-
-  const current = prompts[activePromptIndex];
-
-  const handleSelectPrompt = (index: number) => {
-    if (index === activePromptIndex) return;
-    setIsGenerating(true);
-    setActivePromptIndex(index);
-    setTimeout(() => {
-      setIsGenerating(false);
-    }, 400);
   };
 
   return (
@@ -169,7 +111,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
             transition={{ delay: 0.85, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="text-base sm:text-lg md:text-xl text-slate-600 font-normal leading-relaxed max-w-3xl mx-auto mb-8 sm:mb-10"
           >
-            OptigoAI understands your business, finds what's stopping you from growing, creates your marketing, and helps you take action — all from one simple app.
+            OptigoAI finds what’s holding you back, creates your marketing, and tells you exactly what to do next.
           </motion.p>
 
           {/* CTA Buttons - Enter after subheadline */}
@@ -209,298 +151,150 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
           </motion.div>
         </div>
 
-        {/* Hero Showcase Split Card (Voiceflow Aesthetic with Organic Lush Backdrop) */}
+        {/* Hero Showcase Split Card with Subtle Nature Backdrop & Cool iOS Liquid Glass Content */}
         <motion.div
-          initial={{ opacity: 0, y: 44, scale: 0.97 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ delay: 1.4, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
-          className="relative rounded-[32px] sm:rounded-[40px] overflow-hidden shadow-2xl border border-slate-200/80 bg-slate-950"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          className="relative rounded-[32px] sm:rounded-[44px] overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] border border-slate-200/80 bg-slate-950 p-4 sm:p-7 md:p-10 transform-gpu"
         >
-
-          {/* Lush Green Landscape Photography Background */}
-          <div className="absolute inset-0 z-0">
+          {/* Subdued, Calm Landscape Background */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
             <img
               src="/assets/hero_lush_background.jpg"
-              alt="Lush green organic landscape texture"
-              className="w-full h-full object-cover object-center opacity-85 saturate-120"
+              alt="Lush landscape texture"
+              className="w-full h-full object-cover object-center opacity-70 saturate-[80%]"
             />
-            {/* Soft dark vignette gradients */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/35 to-slate-950/25" />
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-transparent to-slate-950/80" />
+            {/* Cool Slate-Blue Ambient Tint (Tones down harsh warmth & brightness) */}
+            <div className="absolute inset-0 bg-slate-950/50" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/30 to-slate-950/50" />
           </div>
 
-          {/* Content Over the Backdrop */}
-          <div className="relative z-10 p-5 sm:p-8 md:p-12 lg:p-14">
+          <div className="relative z-10">
 
-            {/* Top Bar inside Card */}
-            <div className="flex flex-wrap items-center justify-between gap-4 pb-6 sm:pb-8 border-b border-white/15 mb-8 sm:mb-10">
-              <div className="flex items-center gap-3">
-                <span className="text-white text-xs sm:text-sm font-semibold tracking-wide">
-                  OptigoAI Autonomous Growth Analysis
-                </span>
-              </div>
+            {/* Visual Bento Grid: 3 Cool Liquid Glass Product Widgets */}
+            <div className="space-y-4">
 
-              {/* Quick Result Badges */}
-              <div className="flex items-center gap-4 text-white text-xs">
-                <div className="flex items-center gap-1.5 bg-black/40 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/15">
-                  <TrendingUp className="w-3.5 h-3.5 text-emerald-400" />
-                  <span className="text-slate-300">Local Actions:</span>
-                  <span className="font-bold text-white">+148%</span>
-                </div>
-                <div className="hidden sm:flex items-center gap-1.5 bg-black/40 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/15">
-                  <Star className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
-                  <span className="text-slate-300">Rating:</span>
-                  <span className="font-bold text-white">4.9 / 5.0</span>
-                </div>
-              </div>
-            </div>
-
-            {/* 3-Column Layout Matching Voiceflow Reference (Case Study Card + Central Chat Agent + Live Action Meter) */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
-
-              {/* Left Column: Voiceflow-style Editorial Case Study Card */}
-              <div className="lg:col-span-4 bg-white/95 backdrop-blur-xl rounded-2xl p-6 sm:p-7 shadow-xl border border-white/80 flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
-                    <span className="text-[11px] font-bold text-blue-600 uppercase tracking-wider">
-                      Verified Outcome
-                    </span>
-                    <span className="text-[10px] text-slate-400 font-mono">60 Days</span>
-                  </div>
-
-                  <div className="font-serif-heading text-4xl sm:text-5xl font-normal text-slate-900 tracking-tight mb-2">
-                    +148%
-                  </div>
-
-                  <p className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-3">
-                    Customer Actions & Calls
-                  </p>
-
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6 font-normal">
-                    Local businesses use OptigoAI to automate Google review replies, uncover local keyword gaps, and launch weekend promotions without an agency.
-                  </p>
-
-                  {/* Quick Pill Stats */}
-                  <div className="space-y-2 bg-slate-50 p-3.5 rounded-xl border border-slate-100 text-xs">
-                    <div className="flex items-center justify-between">
-                      <span className="text-slate-600">Google Map Pack</span>
-                      <span className="font-bold text-emerald-600">Top 3 (#1 Avg)</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-slate-600">Review Reply Speed</span>
-                      <span className="font-bold text-emerald-600">&lt; 15 Minutes</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-slate-600">Weekly Time Saved</span>
-                      <span className="font-bold text-slate-900">7.5 Hours</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-5 mt-4 border-t border-slate-100">
+              {/* Mobile Tab Switcher (Subtle Frosted Capsule) */}
+              <div className="flex sm:hidden items-center justify-between p-1.5 bg-white/[0.08] backdrop-blur-2xl rounded-2xl border border-white/20 shadow-md mb-3">
+                {[
+                  { label: 'Map Rank', id: 0 },
+                  { label: 'AI Studio', id: 1 },
+                  { label: 'Reviews', id: 2 },
+                ].map((tab) => (
                   <button
-                    onClick={onOpenGetStarted}
-                    className="text-xs font-bold text-blue-600 hover:text-blue-700 transition-colors flex items-center gap-1 group cursor-pointer"
+                    key={tab.id}
+                    onClick={() => setActivePromptIndex(tab.id)}
+                    className={`flex-1 py-2 px-2 text-xs font-bold rounded-xl transition-all cursor-pointer ${activePromptIndex === tab.id
+                      ? 'bg-white text-slate-900 shadow-md'
+                      : 'text-slate-300 hover:text-white'
+                      }`}
                   >
-                    <span>Read local business case study</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    {tab.label}
                   </button>
-                </div>
+                ))}
               </div>
 
-              {/* Center Column: Interactive Conversational AI CMO Mockup (Voiceflow Central Mobile Frame Style) */}
-              <div className="lg:col-span-5 bg-white/95 backdrop-blur-xl rounded-2xl p-5 sm:p-6 shadow-2xl border border-white/80 flex flex-col justify-between">
-                <div>
-                  {/* Agent Header */}
-                  <div className="flex items-center justify-between pb-3.5 border-b border-slate-100 mb-4">
-                    <div className="flex items-center gap-2.5">
-                      <div className="relative">
-                        <div className="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center text-white font-bold text-xs">
-                          AI
-                        </div>
-                        <div className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-500 rounded-full border-2 border-white" />
-                      </div>
-                      <div>
-                        <h4 className="text-xs font-bold text-slate-900">OptigoAI Marketing Manager</h4>
-                        <p className="text-[10px] text-emerald-600 font-medium">Ready with your daily growth strategy</p>
+              {/* 3 Cool Liquid Glass Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 items-stretch">
+
+                {/* Card 1: Google Map #1 Rank Booster */}
+                <div className={`bg-white/[0.10] backdrop-blur-2xl rounded-3xl p-5 sm:p-6 border border-white/20 shadow-[0_16px_40px_rgba(0,0,0,0.25),inset_0_1px_1.5px_rgba(255,255,255,0.3)] flex flex-col justify-between transition-all hover:bg-white/[0.14] ${activePromptIndex !== 0 ? 'hidden md:flex' : 'flex'
+                  }`}>
+                  <div>
+
+
+                    <div className="text-center py-3.5 bg-white/[0.06] backdrop-blur-md rounded-2xl border border-white/15 mb-4">
+                      <span className="text-[11px] text-slate-400 font-medium block mb-1">Search Position</span>
+                      <div className="flex items-center justify-center gap-3">
+                        <span className="text-slate-500 line-through text-sm font-bold">#10</span>
+                        <span className="text-emerald-400 font-bold text-sm">→</span>
+                        <span className="text-2xl sm:text-3xl font-serif-heading text-white font-bold">#1 Rank</span>
                       </div>
                     </div>
-                    <span className="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">
-                      Step 1 of 3
-                    </span>
-                  </div>
 
-                  {/* Interactive Prompt Tabs */}
-                  <div className="mb-3.5">
-                    <div className="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar">
-                      {prompts.map((p, idx) => (
-                        <button
-                          key={p.query}
-                          onClick={() => handleSelectPrompt(idx)}
-                          className={`text-[11px] px-3 py-1.5 rounded-full transition-all whitespace-nowrap cursor-pointer ${activePromptIndex === idx
-                            ? 'bg-slate-900 text-white font-semibold shadow-xs'
-                            : 'bg-slate-100 text-slate-600 hover:bg-slate-200/80'
-                            }`}
-                        >
-                          {p.query.split(' ')[0]} {p.query.split(' ')[1]}...
-                        </button>
-                      ))}
+                    <div className="space-y-2 text-xs">
+                      <div className="flex items-center justify-between bg-white/[0.06] backdrop-blur-md px-3.5 py-2.5 rounded-xl border border-white/10">
+                        <span className="text-slate-200 font-medium">"Specialty Coffee"</span>
+                        <span className="text-emerald-300 font-bold">#1 Map</span>
+                      </div>
+                      <div className="flex items-center justify-between bg-white/[0.06] backdrop-blur-md px-3.5 py-2.5 rounded-xl border border-white/10">
+                        <span className="text-slate-200 font-medium">"Best Cafe Near Me"</span>
+                        <span className="text-emerald-300 font-bold">#1 Map</span>
+                      </div>
                     </div>
                   </div>
 
-                  {/* Chat Conversation Area */}
-                  <div className="space-y-3 bg-slate-50/90 rounded-xl p-3.5 border border-slate-100/90 text-xs">
-                    {/* User Query Bubble */}
-                    <div className="flex justify-end">
-                      <div className="bg-blue-600 text-white px-3.5 py-2 rounded-2xl rounded-tr-xs font-medium max-w-[90%] shadow-xs">
-                        "{current.query}"
-                      </div>
-                    </div>
-
-                    {/* AI Response */}
-                    <div className="flex items-start gap-2 pt-1 min-w-0 w-full">
-                      <div className="w-5 h-5 rounded-full bg-slate-900 text-white flex items-center justify-center text-[10px] shrink-0 mt-0.5">
-                        AI
-                      </div>
-                      <div className="bg-white rounded-2xl rounded-tl-xs p-3 border border-slate-200/80 shadow-xs space-y-2 flex-1 min-w-0 overflow-hidden">
-                        {isGenerating ? (
-                          <div className="flex items-center gap-1.5 text-slate-400 py-1">
-                            <span className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-bounce" />
-                            <span className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-bounce [animation-delay:0.2s]" />
-                            <span className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-bounce [animation-delay:0.4s]" />
-                            <span className="text-[11px]">Analyzing Google & Competitors...</span>
-                          </div>
-                        ) : (
-                          <>
-                            <p className="font-semibold text-slate-900 leading-snug break-words">
-                              {current.aiResponse}
-                            </p>
-                            <div className="space-y-1.5 pt-1">
-                              {current.actions.map((act, aIdx) => (
-                                <div key={aIdx} className="flex items-center justify-between text-[11px] bg-slate-50 px-2.5 py-1.5 rounded-lg border border-slate-100 min-w-0 gap-2">
-                                  <span className="text-slate-700 font-medium truncate flex-1 min-w-0">
-                                    {act.label}
-                                  </span>
-                                  <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded shrink-0 whitespace-nowrap">
-                                    {act.impact}
-                                  </span>
-                                </div>
-                              ))}
-                            </div>
-                            <div className="pt-1.5 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-400">
-                              <span className="text-emerald-700 font-semibold">✓ Creatives & copy drafted</span>
-                              <span>Ready to execute</span>
-                            </div>
-                          </>
-                        )}
-                      </div>
-                    </div>
+                  <div className="pt-4 mt-4 border-t border-white/15 flex items-center justify-between text-xs text-slate-300">
+                    <span>Actions & Calls:</span>
+                    <span className="text-emerald-300 font-bold text-sm">+148%</span>
                   </div>
                 </div>
 
-                {/* Bottom Realistic Input Bar */}
-                <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between gap-2">
-                  <div className="flex-1 flex items-center gap-2 bg-slate-100 px-3 py-1.5 rounded-full text-xs text-slate-400">
-                    <Mic className="w-3.5 h-3.5 text-slate-400" />
-                    <span className="truncate">Ask OptigoAI anything...</span>
-                  </div>
-                  <button
-                    onClick={onOpenGetStarted}
-                    className="w-7 h-7 rounded-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center transition shrink-0 cursor-pointer shadow-xs"
-                    title="Send"
-                  >
-                    <Send className="w-3 h-3" />
-                  </button>
-                </div>
-              </div>
+                {/* Card 2: 1-Click AI Campaign Studio */}
+                <div className={`bg-white/[0.10] backdrop-blur-2xl rounded-3xl p-5 sm:p-6 border border-white/20 shadow-[0_16px_40px_rgba(0,0,0,0.25),inset_0_1px_1.5px_rgba(255,255,255,0.3)] flex flex-col justify-between transition-all hover:bg-white/[0.14] ${activePromptIndex !== 1 ? 'hidden md:flex' : 'flex'
+                  }`}>
+                  <div>
 
-              {/* Right Column: Live Action Checklist (Voiceflow Resolution / Action Meter) */}
-              <div className="lg:col-span-3 bg-white/95 backdrop-blur-xl rounded-2xl p-5 sm:p-6 shadow-xl border border-white/80 flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between pb-3 border-b border-slate-100 mb-3.5">
-                    <span className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                      <Zap className="w-3.5 h-3.5 text-blue-600" />
-                      Today's Priorities
-                    </span>
-                    <span className="text-[10px] font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">
-                      {completedSteps.length}/3 Done
-                    </span>
+                    {/* Creative Card Preview (Subtle Cool Frosted) */}
+                    <div className="bg-white/[0.08] backdrop-blur-md p-4 rounded-2xl border border-white/15 mb-4 text-center">
+                      <span className="text-2xl mb-1 block">🥐</span>
+                      <h4 className="font-bold text-white text-sm">Weekend 20% Off Brunch</h4>
+                      <p className="text-[11px] text-slate-300 mt-0.5 font-normal">Formatted for Google, IG & Facebook</p>
+                    </div>
+
+                    <div className="flex items-center justify-center gap-1.5 mb-2">
+                      <span className="text-[10px] font-medium bg-white/[0.08] px-2.5 py-1 rounded-lg border border-white/10 text-slate-300">Google Post</span>
+                      <span className="text-[10px] font-medium bg-white/[0.08] px-2.5 py-1 rounded-lg border border-white/10 text-slate-300">Instagram</span>
+                      <span className="text-[10px] font-medium bg-white/[0.08] px-2.5 py-1 rounded-lg border border-white/10 text-slate-300">Facebook</span>
+                    </div>
                   </div>
 
-                  <p className="text-[11px] text-slate-500 mb-3 leading-relaxed">
-                    Zero guesswork. Plain-English actions to complete today.
-                  </p>
-
-                  <div className="space-y-2">
-                    {/* Action 1 */}
-                    <div
-                      onClick={() => toggleStep(1)}
-                      className={`p-2.5 rounded-xl border transition-all cursor-pointer flex items-start gap-2.5 ${completedSteps.includes(1)
-                        ? 'bg-emerald-50/70 border-emerald-200'
-                        : 'bg-white border-slate-200 hover:border-slate-300'
-                        }`}
+                  <div className="pt-4 mt-4 border-t border-white/15">
+                    <button
+                      onClick={onOpenGetStarted}
+                      className="w-full py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer shadow-md shadow-blue-600/30"
                     >
-                      <div className={`w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${completedSteps.includes(1) ? 'bg-emerald-600 text-white' : 'border border-slate-300'
-                        }`}>
-                        {completedSteps.includes(1) && <CheckCircle2 className="w-3 h-3" />}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <span className="text-[11px] font-bold text-slate-900 block truncate">Reply to 5 reviews</span>
-                        <span className="text-[10px] text-slate-500">AI drafted 5-star replies</span>
-                      </div>
-                    </div>
-
-                    {/* Action 2 */}
-                    <div
-                      onClick={() => toggleStep(2)}
-                      className={`p-2.5 rounded-xl border transition-all cursor-pointer flex items-start gap-2.5 ${completedSteps.includes(2)
-                        ? 'bg-emerald-50/70 border-emerald-200'
-                        : 'bg-white border-slate-200 hover:border-slate-300'
-                        }`}
-                    >
-                      <div className={`w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${completedSteps.includes(2) ? 'bg-emerald-600 text-white' : 'border border-slate-300'
-                        }`}>
-                        {completedSteps.includes(2) && <CheckCircle2 className="w-3 h-3" />}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <span className="text-[11px] font-bold text-slate-900 block truncate">Publish Weekend Promo</span>
-                        <span className="text-[10px] text-slate-500">Targets nearby foodies</span>
-                      </div>
-                    </div>
-
-                    {/* Action 3 */}
-                    <div
-                      onClick={() => toggleStep(3)}
-                      className={`p-2.5 rounded-xl border transition-all cursor-pointer flex items-start gap-2.5 ${completedSteps.includes(3)
-                        ? 'bg-emerald-50/70 border-emerald-200'
-                        : 'bg-white border-slate-200 hover:border-slate-300'
-                        }`}
-                    >
-                      <div className={`w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${completedSteps.includes(3) ? 'bg-emerald-600 text-white' : 'border border-slate-300'
-                        }`}>
-                        {completedSteps.includes(3) && <CheckCircle2 className="w-3 h-3" />}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <span className="text-[11px] font-bold text-slate-900 block truncate">Update GMB Keywords</span>
-                        <span className="text-[10px] text-slate-500">4 local keywords injected</span>
-                      </div>
-                    </div>
+                      <span>Publish in 1-Click</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
                   </div>
                 </div>
 
-                <div className="pt-4 mt-3 border-t border-slate-100">
-                  <button
-                    onClick={onOpenGetStarted}
-                    className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl shadow-xs transition flex items-center justify-center gap-1.5 cursor-pointer"
-                  >
-                    <span>Execute 3 Actions</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
+                {/* Card 3: 5-Star Review Shield */}
+                <div className={`bg-white/[0.10] backdrop-blur-2xl rounded-3xl p-5 sm:p-6 border border-white/20 shadow-[0_16px_40px_rgba(0,0,0,0.25),inset_0_1px_1.5px_rgba(255,255,255,0.3)] flex flex-col justify-between transition-all hover:bg-white/[0.14] ${activePromptIndex !== 2 ? 'hidden md:flex' : 'flex'
+                  }`}>
+                  <div>
+
+                    {/* Customer Review Bubble */}
+                    <div className="bg-white/[0.06] backdrop-blur-md p-3.5 rounded-2xl border border-white/10 mb-2.5 space-y-1">
+                      <div className="flex items-center justify-between text-[11px]">
+                        <span className="font-bold text-white">Sarah M.</span>
+                        <span className="text-amber-400">★★★★★</span>
+                      </div>
+                      <p className="text-xs text-slate-300 italic leading-snug">
+                        "Best croissant & coffee in the neighborhood!"
+                      </p>
+                    </div>
+
+                    {/* AI Reply Bubble (Subtle Frosted Mint) */}
+                    <div className="bg-emerald-500/[0.12] backdrop-blur-md p-3.5 rounded-2xl border border-emerald-400/25 space-y-1">
+                      <span className="text-[10px] font-bold text-emerald-300 block">AI Auto-Reply:</span>
+                      <p className="text-xs text-emerald-100 leading-snug font-normal">
+                        "Thanks Sarah! We bake fresh at 6am every day. See you soon! 🥐"
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 mt-4 border-t border-white/15 flex items-center justify-between text-xs text-slate-300">
+                    <span>Response Time:</span>
+                    <span className="text-emerald-300 font-bold text-sm">&lt; 3 Mins</span>
+                  </div>
                 </div>
+
               </div>
 
             </div>
-
           </div>
         </motion.div>
 

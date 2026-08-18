@@ -14,7 +14,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenGetStarted }) => {
       stepNum: '01',
       title: 'Connect Your Business',
       tagline: 'Instant 1-Click Platform Linking',
-      desc: 'Connect the marketing platforms your business already uses. Secure OAuth ensures your data remains 100% private and protected.',
+      desc: 'Link your existing platforms in under 60 seconds. Your data stays 100% private.',
       platforms: ['Google Business Profile', 'Google Search Console', 'Instagram', 'Facebook', 'TripAdvisor', 'Yelp'],
       preview: {
         badge: 'Connected Platforms',
@@ -31,7 +31,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenGetStarted }) => {
       stepNum: '02',
       title: 'OptigoAI Understands Your Business',
       tagline: 'Deep Business Knowledge Modeling',
-      desc: 'Tell OptigoAI about your business, customers, services, location, goals, and target audience. AI builds a simple, accurate mental model of your brand voice.',
+      desc: 'Share your business, customers, and goals. AI builds an accurate model of your brand voice.',
       platforms: ['Brand Voice', 'Service Catalog', 'Target Audience', 'Local Competitors', 'Seasonal Specials'],
       preview: {
         badge: 'Business Knowledge Graph',
@@ -48,7 +48,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenGetStarted }) => {
       stepNum: '03',
       title: 'AI Finds Opportunities',
       tagline: 'Continuous 24/7 Intelligence Scan',
-      desc: 'OptigoAI continuously scans your online presence to uncover problems, missed opportunities, customer sentiment shifts, search ranking drops, and competitor gaps.',
+      desc: 'Continuously scans your online presence to uncover missed opportunities, ranking drops, and competitor gaps.',
       platforms: ['Review Sentiment', 'Search Visibility', 'Competitor Postings', 'Photo Engagement', 'Keyword Gaps'],
       preview: {
         badge: 'Live Intelligence Feed',
@@ -69,7 +69,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenGetStarted }) => {
       platforms: ['High Priority Action', 'Revenue Opportunity', 'SEO Optimization', 'Reputation Shield'],
       preview: {
         badge: 'Today’s Recommendation',
-        quote: '"Your Google profile received 32% fewer customer actions this month. Competitors are publishing more frequently. Create a weekend promotion post and update your keywords."',
+        quote: '"Google actions dropped 32%. Competitors are posting more. Here\'s your fix:"',
         items: [
           { name: 'Priority 1', status: 'Approve 5 pre-drafted review replies', icon: CheckCircle2, color: 'text-emerald-600', bg: 'bg-emerald-50' },
           { name: 'Priority 2', status: 'Publish "Weekend 20% Off Brunch" Post', icon: CheckCircle2, color: 'text-emerald-600', bg: 'bg-emerald-50' },
@@ -82,7 +82,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenGetStarted }) => {
       stepNum: '05',
       title: 'Create & Execute',
       tagline: '1-Click Multi-Channel Publishing',
-      desc: 'OptigoAI creates social media posts, Google Business posts, review replies, marketing campaigns, captivating captions, and AI-generated creatives.',
+      desc: 'Creates posts, review replies, campaigns, and AI-generated creatives — ready in 1 click.',
       platforms: ['Google Posts', 'Social Captions', 'AI Creatives', 'Review Replies', 'Marketing Campaigns'],
       preview: {
         badge: 'Generated Creative & Copy',
@@ -99,7 +99,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenGetStarted }) => {
       stepNum: '06',
       title: 'Track What Happens',
       tagline: 'Proven ROI & Autonomous Learning',
-      desc: 'See whether your actions are helping your business grow. OptigoAI continuously learns from your results and refines future recommendations.',
+      desc: 'See if your actions are driving growth. AI learns from results and refines future recommendations.',
       platforms: ['Phone Calls Lift', 'Direction Requests', 'Review Score', 'Foot Traffic', 'Revenue Growth'],
       preview: {
         badge: 'Growth Outcome Tracker',

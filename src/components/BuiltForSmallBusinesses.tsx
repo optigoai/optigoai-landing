@@ -33,7 +33,7 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
           </div>
           <div className="max-w-sm">
             <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed">
-              Explore tailored growth playbooks, track local search rankings, and stay consistent with your daily actions.
+              Tailored growth playbooks and daily actions to stay ahead.
             </p>
           </div>
         </motion.div>
@@ -77,7 +77,7 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
 
             <div>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                <strong className="text-slate-900 font-bold">1-Click Campaign Studio.</strong> Create seasonal flyers, weekend special announcements, and promotional copy formatted for every network in under 15 seconds.
+                <strong className="text-slate-900 font-bold">1-Click Campaign Studio.</strong> Create seasonal promos and posts for every platform in under 15 seconds.
               </p>
             </div>
           </motion.div>
@@ -112,7 +112,7 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
 
             <div>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                <strong className="text-slate-900 font-bold">Key Growth Levers.</strong> Scans local algorithm updates, competitor posting frequencies, and review velocity to prioritize what moves the needle for your revenue.
+                <strong className="text-slate-900 font-bold">Key Growth Levers.</strong> Prioritizes what moves the needle for your revenue — automatically.
               </p>
             </div>
           </motion.div>
@@ -149,7 +149,7 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
               </h3>
 
               <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                Never leave a customer review unanswered. Instant personalized 5-star replies protect your reputation and boost map rankings 24/7.
+                Never leave a review unanswered. Instant personalized replies protect your reputation 24/7.
               </p>
             </div>
 
@@ -180,7 +180,7 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
               </h3>
 
               <p className="text-xs sm:text-sm text-slate-700 leading-relaxed max-w-xl">
-                When nearby customers search for your products or services, OptigoAI keeps your profile in the coveted Google 3-Pack with optimized keywords, fresh posts, and consistent review engagement.
+                Stay in Google’s top 3 results with optimized keywords, fresh posts, and consistent engagement.
               </p>
 
               {/* 3 Metric Pills */}
@@ -255,7 +255,7 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
 
             <div>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                <strong className="text-slate-900 font-bold">Pre-Trained Industry Playbooks.</strong> From food service and retail to medical and local trades, get customized growth plans with zero setup.
+                <strong className="text-slate-900 font-bold">Pre-Trained Industry Playbooks.</strong> Customized growth plans for your industry — zero setup needed.
               </p>
             </div>
           </motion.div>

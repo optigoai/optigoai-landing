@@ -11,31 +11,31 @@ export const WhyOptigoAI: React.FC<WhyOptigoAIProps> = ({ onOpenGetStarted }) =>
     {
       title: 'Local Businesses',
       icon: Store,
-      desc: 'Get discovered by more high-intent customers in your neighborhood and top the Google map pack.',
+      desc: 'Get discovered by more customers and top Google Maps.',
     },
     {
       title: 'Growing Businesses',
       icon: TrendingUp,
-      desc: 'Build a dependable, consistent marketing system without having to hire a large in-house team.',
+      desc: 'Build a consistent marketing system without a big team.',
     },
     {
       title: 'Busy Business Owners',
       icon: UserCheck,
-      desc: 'Know exactly what to focus on every morning without spending painful hours studying confusing charts.',
+      desc: 'Know exactly what to focus on every morning — in minutes.',
     },
     {
       title: 'Marketing Teams & Agencies',
       icon: Users,
-      desc: 'Automate repetitive copywriting, review responses, and reporting to focus on high-level growth strategy.',
+      desc: 'Automate copywriting, review replies, and reporting.',
     },
   ];
 
   const comparisonRows = [
-    { feature: 'Primary Output', traditional: '50+ charts & confusing metric dashboards', optigo: '3 prioritized, revenue-driving actions' },
-    { feature: 'Review Management', traditional: 'Manual typing or robotic canned templates', optigo: 'Personalized 5-star AI replies in 1 click' },
-    { feature: 'Content & Creatives', traditional: 'Hire copywriters or spend hours on Canva', optigo: 'Instant studio-grade copy, posts & visuals' },
-    { feature: 'Local SEO Strategy', traditional: 'Pay $1,500/mo to an agency with slow updates', optigo: 'Continuous 24/7 autonomous Google optimization' },
-    { feature: 'Time Required', traditional: '15-20 hours every week managing tools', optigo: 'Less than 5 minutes a day' },
+    { feature: 'Primary Output', traditional: '50+ confusing dashboards', optigo: '3 prioritized daily actions' },
+    { feature: 'Review Management', traditional: 'Manual or robotic templates', optigo: 'Personalized AI replies in 1 click' },
+    { feature: 'Content & Creatives', traditional: 'Hire writers or DIY hours', optigo: 'Instant studio-grade copy & visuals' },
+    { feature: 'Local SEO Strategy', traditional: '$1,500/mo agency, slow updates', optigo: '24/7 autonomous optimization' },
+    { feature: 'Time Required', traditional: '15–20 hrs/week managing tools', optigo: 'Less than 5 minutes a day' },
   ];
 
   return (
@@ -61,7 +61,7 @@ export const WhyOptigoAI: React.FC<WhyOptigoAIProps> = ({ onOpenGetStarted }) =>
           </h2>
 
           <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
-            Whether you operate a single storefront or manage multi-location operations, OptigoAI adapts to your growth stage.
+            Single storefront or multi-location — OptigoAI adapts to your growth stage.
           </p>
         </motion.div>
 
@@ -104,7 +104,7 @@ export const WhyOptigoAI: React.FC<WhyOptigoAIProps> = ({ onOpenGetStarted }) =>
               Your Business Has Enough To Manage.
             </h3>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-              You shouldn't need five different marketing tools just to figure out what to do next. OptigoAI brings business intelligence, marketing recommendations, content creation, customer engagement, and marketing execution together in one simple experience.
+              Stop juggling five tools. OptigoAI brings intelligence, content, and execution into one simple experience.
             </p>
           </div>
 
