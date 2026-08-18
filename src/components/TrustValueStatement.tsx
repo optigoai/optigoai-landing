@@ -121,9 +121,9 @@ export const TrustValueStatement: React.FC<TrustValueStatementProps> = ({ onOpen
               className="text-center"
             >
               <div className="font-serif-heading text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-900 mb-1">
-                10K+
+                # 1
               </div>
-              <p className="text-xs sm:text-sm font-medium text-slate-500">Local Businesses Empowered</p>
+              <p className="text-xs sm:text-sm font-medium text-slate-500">Business Search result</p>
             </motion.div>
 
             <motion.div
@@ -166,8 +166,8 @@ export const TrustValueStatement: React.FC<TrustValueStatementProps> = ({ onOpen
                   key={step.title}
                   onClick={() => setActiveStep(index)}
                   className={`p-4 rounded-2xl border text-left transition-all cursor-pointer flex flex-col justify-between ${isSelected
-                      ? 'bg-white border-blue-600 shadow-md ring-2 ring-blue-600/10'
-                      : 'bg-white/60 border-slate-200/80 hover:bg-white hover:border-slate-300'
+                    ? 'bg-white border-blue-600 shadow-md ring-2 ring-blue-600/10'
+                    : 'bg-white/60 border-slate-200/80 hover:bg-white hover:border-slate-300'
                     }`}
                 >
                   <div className="flex items-center justify-between mb-3">
