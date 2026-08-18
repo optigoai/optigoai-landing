@@ -27,9 +27,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenGetStarted, onOpenVideoGui
             {/* Col 1 & 2: Brand Bio */}
             <div className="col-span-2 lg:col-span-2 space-y-4">
               <a href="#" className="flex items-center">
-                <span className="font-bold text-2xl tracking-tight text-slate-900">
-                  Optigo<span className="text-blue-600 font-extrabold">AI</span>
-                </span>
+                <img 
+                  src="/assets/optigoai-logo-removebg.png" 
+                  alt="OptigoAI" 
+                  className="h-8 sm:h-9 w-auto object-contain"
+                />
               </a>
 
               <p className="text-slate-600 text-xs sm:text-sm max-w-sm leading-relaxed font-normal">

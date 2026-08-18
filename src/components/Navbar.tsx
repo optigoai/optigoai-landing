@@ -33,16 +33,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGetStarted, onOpenVideoGui
       {/* Dynamic Voiceflow-style Morphing Navbar Container */}
       <div
         className={`pointer-events-auto transition-all duration-300 flex items-center justify-between ${isScrolled
-            ? 'w-full max-w-6xl rounded-full glass-nav shadow-lg shadow-black/5 border border-slate-200/80 px-6 sm:px-8 py-3'
-            : 'w-full max-w-7xl px-2 sm:px-6 py-1'
+          ? 'w-full max-w-6xl rounded-full glass-nav shadow-lg shadow-black/5 border border-slate-200/80 px-6 sm:px-8 py-3'
+          : 'w-full max-w-7xl px-2 sm:px-6 py-1'
           }`}
       >
         {/* Left: OptigoAI Logo */}
         <div className="flex items-center shrink-0 mr-4 sm:mr-8">
           <a href="#" className="flex items-center group">
-            <span className="font-bold text-xl sm:text-2xl tracking-tight text-slate-900 whitespace-nowrap">
-              Optigo<span className="text-blue-600 font-extrabold">AI</span>
-            </span>
+            <img
+              src="/assets/optigoai-logo-removebg.png"
+              alt="OptigoAI"
+              className="h-8 sm:h-9 w-auto object-contain transition-transform group-hover:scale-105"
+            />
           </a>
         </div>
 
@@ -50,8 +52,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGetStarted, onOpenVideoGui
         <nav className="hidden lg:flex items-center justify-center flex-1 px-4">
           <div
             className={`transition-all duration-300 flex items-center justify-center gap-6 xl:gap-8 whitespace-nowrap ${isScrolled
-                ? 'bg-transparent px-0 py-0'
-                : 'bg-black/[0.03] backdrop-blur-sm border border-black/[0.04] px-8 py-2.5 rounded-full shadow-xs'
+              ? 'bg-transparent px-0 py-0'
+              : 'bg-black/[0.03] backdrop-blur-sm border border-black/[0.04] px-8 py-2.5 rounded-full shadow-xs'
               }`}
           >
             {navLinks.map((link) => (
