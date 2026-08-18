@@ -10,9 +10,9 @@ export const WhyOptigoAI: React.FC<WhyOptigoAIProps> = ({ onOpenGetStarted }) =>
   return (
     <section id="why-optigo" className="py-20 sm:py-28 bg-[#FAF9F6] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
@@ -43,7 +43,7 @@ export const WhyOptigoAI: React.FC<WhyOptigoAIProps> = ({ onOpenGetStarted }) =>
           className="bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-slate-200/90 shadow-sm mb-10 relative overflow-hidden"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-            
+
             {/* Step 1: Input Channels (4 cols) */}
             <div className="lg:col-span-4 space-y-2">
               <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-3">
@@ -80,8 +80,6 @@ export const WhyOptigoAI: React.FC<WhyOptigoAIProps> = ({ onOpenGetStarted }) =>
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center shadow-lg shadow-blue-600/25 relative">
                   <Sparkles className="w-7 h-7" />
                   <span className="absolute -top-1 -right-1 flex h-3 w-3">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
                   </span>
                 </div>
                 <div className="hidden lg:block w-8 h-[2px] bg-gradient-to-r from-blue-400 to-emerald-400" />
