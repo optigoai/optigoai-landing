@@ -13,8 +13,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FAF9F6" />
 
-  <!-- LCP Hero Image Preload for Fast Core Web Vitals -->
-  <link rel="preload" as="image" href="/assets/hero_lush_background.jpg" type="image/jpeg" fetchpriority="high" />
+  <!-- LCP Hero Image Preload & Search Thumbnail -->
+  <link rel="preload" as="image" href="/assets/hero.png" type="image/png" fetchpriority="high" />
+  <link rel="image_src" href="https://www.optigoai.com/assets/hero.png" />
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://www.optigoai.com/" />
@@ -29,7 +30,7 @@
     content="AI marketing assistant, AI marketing platform, AI CMO, AI marketing software, small business marketing software, marketing automation for small businesses, local SEO tools, AI review management, competitor intelligence, AI content generation" />
   <meta name="author" content="OptigoAI" />
 
-  <!-- Open Graph / Facebook / WhatsApp (Optimized 1200x630 1.91:1) -->
+  <!-- Open Graph / Facebook / WhatsApp / Google Search (Optimized hero preview) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="OptigoAI" />
   <meta property="og:url" content="https://www.optigoai.com/" />
@@ -38,12 +39,10 @@
   <meta property="og:description"
     content="OptigoAI is an AI marketing assistant for small businesses. Analyze your marketing, manage reviews, improve local SEO, create content and campaigns, and discover your next best action." />
   <meta property="og:image"
-    content="https://res.cloudinary.com/dwqajqcnq/image/upload/c_pad,b_rgb:FAF9F6,w_1200,h_630,q_auto:good,f_jpg/v1787042211/4f85d8bf-4a08-4258-a651-c1e268c0e50b.jpg" />
+    content="https://www.optigoai.com/assets/hero.png" />
   <meta property="og:image:secure_url"
-    content="https://res.cloudinary.com/dwqajqcnq/image/upload/c_pad,b_rgb:FAF9F6,w_1200,h_630,q_auto:good,f_jpg/v1787042211/4f85d8bf-4a08-4258-a651-c1e268c0e50b.jpg" />
-  <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+    content="https://www.optigoai.com/assets/hero.png" />
+  <meta property="og:image:type" content="image/png" />
   <meta property="og:image:alt" content="OptigoAI — AI Marketing Assistant for Small Businesses" />
 
   <!-- Twitter / X Card -->
@@ -53,7 +52,7 @@
   <meta name="twitter:description"
     content="OptigoAI is an AI marketing assistant for small businesses. Analyze your marketing, manage reviews, improve local SEO, create content and campaigns, and discover your next best action." />
   <meta name="twitter:image"
-    content="https://res.cloudinary.com/dwqajqcnq/image/upload/c_pad,b_rgb:FAF9F6,w_1200,h_630,q_auto:good,f_jpg/v1787042211/4f85d8bf-4a08-4258-a651-c1e268c0e50b.jpg" />
+    content="https://www.optigoai.com/assets/hero.png" />
 
   <!-- Schema.org JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -67,6 +66,10 @@
           "name": "OptigoAI",
           "alternateName": ["Optigo AI", "OptigoAI Marketing"],
           "description": "AI Marketing Assistant for Small Businesses",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.optigoai.com/assets/hero.png"
+          },
           "publisher": {
             "@id": "https://www.optigoai.com/#organization"
           },
@@ -84,7 +87,7 @@
             "width": "512",
             "height": "512"
           },
-          "image": "https://www.optigoai.com/assets/optigoai-logo-removebg.png",
+          "image": "https://www.optigoai.com/assets/hero.png",
           "sameAs": [
             "https://twitter.com/OptigoAI"
           ]
@@ -96,6 +99,7 @@
           "applicationCategory": "BusinessApplication",
           "operatingSystem": "Web",
           "url": "https://www.optigoai.com/",
+          "image": "https://www.optigoai.com/assets/hero.png",
           "description": "AI-powered marketing assistant and AI CMO platform for small and medium-sized businesses. Provides local SEO optimization, review replies, competitor intelligence, and automated marketing actions.",
           "offers": {
             "@type": "Offer",
