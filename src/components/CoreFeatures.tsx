@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { 
-  Sparkles, Globe, MessageSquareQuote, Search, PenTool, Image, Users, Megaphone, Lightbulb, 
+import {
+  Sparkles, Globe, MessageSquareQuote, Search, PenTool, Image, Users, Megaphone, Lightbulb,
   CheckCircle2, ArrowRight, Star, Send, ShieldCheck, Flame, Copy, Check, Layers
 } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -180,8 +180,8 @@ export const CoreFeatures: React.FC<CoreFeaturesProps> = ({ onOpenGetStarted }) 
   return (
     <section id="features" className="py-20 sm:py-28 bg-white border-b border-slate-200/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
@@ -203,7 +203,7 @@ export const CoreFeatures: React.FC<CoreFeaturesProps> = ({ onOpenGetStarted }) 
           </p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -217,11 +217,10 @@ export const CoreFeatures: React.FC<CoreFeaturesProps> = ({ onOpenGetStarted }) 
               <button
                 key={f.id}
                 onClick={() => setActiveTab(idx)}
-                className={`px-3.5 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all flex items-center gap-1.5 cursor-pointer ${
-                  isSelected
+                className={`px-3.5 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all flex items-center gap-1.5 cursor-pointer ${isSelected
                     ? 'bg-blue-600 text-white shadow-md shadow-blue-600/20'
                     : 'bg-slate-100 text-slate-700 hover:bg-slate-200/80'
-                }`}
+                  }`}
               >
                 <Icon className="w-3.5 h-3.5" />
                 <span>{f.shortTitle}</span>
@@ -230,14 +229,14 @@ export const CoreFeatures: React.FC<CoreFeaturesProps> = ({ onOpenGetStarted }) 
           })}
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
           className="bg-[#FAF9F6] rounded-3xl p-6 sm:p-10 md:p-12 border border-slate-200 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
         >
-          
+
           {/* Left Column: Feature Details */}
           <div className="lg:col-span-6 space-y-6">
             <div>
@@ -287,7 +286,7 @@ export const CoreFeatures: React.FC<CoreFeaturesProps> = ({ onOpenGetStarted }) 
 
           {/* Right Column: Live Interactive Mockup Widget */}
           <div className="lg:col-span-6">
-            
+
             {/* 1. AI CMO Chat Simulation Widget */}
             {current.interactiveType === 'chat-mock' && (
               <div className="bg-white rounded-2xl p-5 shadow-xl border border-slate-200/90 space-y-4">
@@ -310,7 +309,7 @@ export const CoreFeatures: React.FC<CoreFeaturesProps> = ({ onOpenGetStarted }) 
                   <p>1. Send a "Complimentary Dessert with 2 Entrees" promo to your 450 past local diners.</p>
                   <p>2. Publish an updated Google Post featuring your chef's weekend special.</p>
                   <div className="pt-2 border-t border-slate-200 flex justify-end">
-                    <button 
+                    <button
                       onClick={onOpenGetStarted}
                       className="px-3 py-1 bg-blue-600 text-white text-[11px] font-bold rounded-lg cursor-pointer"
                     >
@@ -362,7 +361,7 @@ export const CoreFeatures: React.FC<CoreFeaturesProps> = ({ onOpenGetStarted }) 
 
                 <div className="bg-slate-50 p-3 rounded-xl border border-slate-100">
                   <div className="flex items-center gap-1 mb-1">
-                    {[1,2,3,4,5].map((s) => (
+                    {[1, 2, 3, 4, 5].map((s) => (
                       <Star key={s} className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
                     ))}
                     <span className="text-xs font-bold text-slate-800 ml-1.5">Sarah Jenkins</span>
@@ -380,7 +379,7 @@ export const CoreFeatures: React.FC<CoreFeaturesProps> = ({ onOpenGetStarted }) 
                   <p className="text-[11px] text-slate-700">
                     "Thank you Sarah! We take huge pride in our fresh artisan sourdough and specialty coffee. Can't wait to welcome you back for brunch!"
                   </p>
-                  <button 
+                  <button
                     onClick={onOpenGetStarted}
                     className="w-full py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-bold transition flex items-center justify-center gap-1 cursor-pointer"
                   >
@@ -468,9 +467,11 @@ export const CoreFeatures: React.FC<CoreFeaturesProps> = ({ onOpenGetStarted }) 
                 </div>
 
                 <div className="rounded-xl overflow-hidden border border-slate-200 relative aspect-video bg-slate-900">
-                  <img 
-                    src="/assets/hero_lush_background.jpg" 
-                    alt="Creative banner preview" 
+                  <img
+                    src="/assets/hero_lush_background.jpg"
+                    alt="AI marketing creative generation preview"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover opacity-70"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent p-4 flex flex-col justify-end text-white">
@@ -482,7 +483,7 @@ export const CoreFeatures: React.FC<CoreFeaturesProps> = ({ onOpenGetStarted }) 
 
                 <div className="flex items-center justify-between text-xs pt-1">
                   <span className="text-slate-500">Auto-branded with your colors & logo</span>
-                  <button 
+                  <button
                     onClick={onOpenGetStarted}
                     className="text-blue-600 font-bold hover:underline cursor-pointer"
                   >
@@ -544,7 +545,7 @@ export const CoreFeatures: React.FC<CoreFeaturesProps> = ({ onOpenGetStarted }) 
                   </div>
                 </div>
 
-                <button 
+                <button
                   onClick={onOpenGetStarted}
                   className="w-full py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer shadow-md"
                 >

@@ -38,11 +38,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGetStarted, onOpenVideoGui
       >
         {/* Left: OptigoAI Logo */}
         <div className="flex items-center shrink-0 mr-4 sm:mr-8">
-          <a href="#" className="flex items-center group">
+          <a href="/" className="flex items-center group" aria-label="OptigoAI Home">
             <img
               src="/assets/optigoai-logo-removebg.png"
-              alt="OptigoAI"
+              alt="OptigoAI — AI Marketing Assistant"
               className="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105"
+              width="150"
+              height="48"
             />
           </a>
         </div>

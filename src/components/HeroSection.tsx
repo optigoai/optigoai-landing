@@ -10,7 +10,7 @@ interface HeroSectionProps {
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOpenVideoGuide }) => {
   const [activePromptIndex, setActivePromptIndex] = useState(0);
 
-  const headlinePart1 = ["Your", "AI", "Marketing", "Manager"];
+  const headlinePart1 = ["Your", "AI", "Marketing", "Assistant"];
   const headlinePart2 = ["That", "Helps", "You", "Get", "More", "Customers."];
 
   const wordContainer: Variants = {
@@ -76,7 +76,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 text-white text-xs font-semibold uppercase tracking-wider mb-6 shadow-sm border border-slate-700/60 hover:border-slate-500 transition-colors"
           >
-            <span>AI-POWERED MARKETING MANAGER</span>
+            <span>AI-POWERED MARKETING ASSISTANT</span>
           </motion.div>
 
           {/* Editorial Grand Headline with Letter/Word Boot Reveal Animation */}
@@ -238,7 +238,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
 
                     {/* Creative Card Preview (Subtle Cool Frosted) */}
                     <div className="bg-white/[0.08] backdrop-blur-md p-4 rounded-2xl border border-white/15 mb-4 text-center">
-                      <span className="text-2xl mb-1 block">🥐</span>
                       <h4 className="font-bold text-white text-sm">Weekend 20% Off Brunch</h4>
                       <p className="text-[11px] text-slate-300 mt-0.5 font-normal">Formatted for Google, IG & Facebook</p>
                     </div>

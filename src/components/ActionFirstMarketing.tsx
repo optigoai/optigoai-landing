@@ -51,9 +51,9 @@ export const ActionFirstMarketing: React.FC<ActionFirstMarketingProps> = ({ onOp
   return (
     <section className="py-20 sm:py-28 bg-white border-b border-slate-200/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
@@ -76,7 +76,7 @@ export const ActionFirstMarketing: React.FC<ActionFirstMarketingProps> = ({ onOp
         </motion.div>
 
         {/* Interactive Today's Priority Action Board */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, margin: "-60px" }}
@@ -109,16 +109,14 @@ export const ActionFirstMarketing: React.FC<ActionFirstMarketingProps> = ({ onOp
                 <div
                   key={task.id}
                   onClick={() => toggleComplete(task.id)}
-                  className={`p-5 rounded-2xl border transition-all cursor-pointer flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 ${
-                    isDone
+                  className={`p-5 rounded-2xl border transition-all cursor-pointer flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 ${isDone
                       ? 'bg-emerald-50/70 border-emerald-300 shadow-xs'
                       : 'bg-white border-slate-200 hover:border-slate-300 hover:shadow-md'
-                  }`}
+                    }`}
                 >
                   <div className="flex items-start gap-3.5 flex-1">
-                    <div className={`w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 transition-colors ${
-                      isDone ? 'bg-emerald-600 text-white' : 'border-2 border-slate-300'
-                    }`}>
+                    <div className={`w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 transition-colors ${isDone ? 'bg-emerald-600 text-white' : 'border-2 border-slate-300'
+                      }`}>
                       {isDone && <Check className="w-4 h-4" />}
                     </div>
 
@@ -132,9 +130,8 @@ export const ActionFirstMarketing: React.FC<ActionFirstMarketingProps> = ({ onOp
                         </span>
                       </div>
 
-                      <h4 className={`text-sm sm:text-base font-bold transition-all ${
-                        isDone ? 'line-through text-slate-400' : 'text-slate-900'
-                      }`}>
+                      <h4 className={`text-sm sm:text-base font-bold transition-all ${isDone ? 'line-through text-slate-400' : 'text-slate-900'
+                        }`}>
                         {task.title}
                       </h4>
 
@@ -155,11 +152,10 @@ export const ActionFirstMarketing: React.FC<ActionFirstMarketingProps> = ({ onOp
                         e.stopPropagation();
                         toggleComplete(task.id);
                       }}
-                      className={`px-4 py-2 text-xs font-bold rounded-xl transition cursor-pointer ${
-                        isDone
+                      className={`px-4 py-2 text-xs font-bold rounded-xl transition cursor-pointer ${isDone
                           ? 'bg-emerald-600 text-white'
                           : 'bg-slate-900 hover:bg-slate-800 text-white'
-                      }`}
+                        }`}
                     >
                       {isDone ? 'Completed ✓' : 'Execute Now'}
                     </button>

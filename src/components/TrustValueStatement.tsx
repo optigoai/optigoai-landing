@@ -67,8 +67,11 @@ export const TrustValueStatement: React.FC<TrustValueStatementProps> = ({ onOpen
           <div className="mb-6 flex justify-center">
             <img
               src="/assets/optigoai-logo-removebg.png"
-              alt="OptigoAI Logo"
+              alt="OptigoAI — AI Marketing Assistant"
               className="h-14 sm:h-18 w-auto object-contain"
+              width="180"
+              height="64"
+              loading="lazy"
             />
           </div>
 

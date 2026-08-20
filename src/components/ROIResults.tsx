@@ -77,7 +77,9 @@ export const ROIResults: React.FC<ROIResultsProps> = ({ onOpenGetStarted }) => {
               <div className="my-2 sm:my-4 flex justify-center items-center">
                 <img
                   src="/assets/rating-before.png"
-                  alt="Google Business Profile before OptigoAI"
+                  alt="Google Business Profile rank before OptigoAI"
+                  loading="lazy"
+                  decoding="async"
                   className="max-h-[260px] sm:max-h-[360px] md:max-h-[400px] w-auto object-contain drop-shadow-md"
                 />
               </div>
@@ -114,7 +116,9 @@ export const ROIResults: React.FC<ROIResultsProps> = ({ onOpenGetStarted }) => {
               <div className="my-2 sm:my-4 flex justify-center items-center">
                 <img
                   src="/assets/rating-after.png"
-                  alt="Google Business Profile after OptigoAI"
+                  alt="Google Business Profile #1 rank after OptigoAI"
+                  loading="lazy"
+                  decoding="async"
                   className="max-h-[260px] sm:max-h-[360px] md:max-h-[400px] w-auto object-contain drop-shadow-md"
                 />
               </div>

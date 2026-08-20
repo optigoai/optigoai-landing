@@ -16,9 +16,9 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
   return (
     <section id="for-businesses" className="py-20 sm:py-28 bg-[#FAF9F6] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Athleats Style Split Section Header */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
@@ -27,8 +27,8 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
         >
           <div className="max-w-2xl">
             <h2 className="font-serif-heading text-4xl sm:text-5xl md:text-6xl text-slate-900 tracking-tight leading-[1.08]">
-              The all-in-one marketing <br className="hidden sm:inline" />
-              manager for small businesses.
+              The AI marketing assistant <br className="hidden sm:inline" />
+              for small businesses.
             </h2>
           </div>
           <div className="max-w-sm">
@@ -40,9 +40,9 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
 
         {/* Athleats Bento Grid Layout (100% Feature-Focused & Product-Driven) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 items-stretch">
-          
+
           {/* Card 1 (Top Left, 4 Cols): Advanced Campaign Studio */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -83,7 +83,7 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
           </motion.div>
 
           {/* Card 2 (Top Center, 4 Cols): Key Growth Levers Pill Cloud */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -96,13 +96,12 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
                 {growthLevers.map((lever, idx) => (
                   <span
                     key={lever}
-                    className={`px-3 py-1.5 rounded-full text-[11px] font-semibold transition-all ${
-                      idx === 0 
-                        ? 'bg-blue-600 text-white shadow-xs' 
-                        : idx === 1 
-                        ? 'bg-amber-100 text-amber-900 border border-amber-200' 
-                        : 'bg-white text-slate-700 border border-slate-200/80 shadow-xs'
-                    }`}
+                    className={`px-3 py-1.5 rounded-full text-[11px] font-semibold transition-all ${idx === 0
+                        ? 'bg-blue-600 text-white shadow-xs'
+                        : idx === 1
+                          ? 'bg-amber-100 text-amber-900 border border-amber-200'
+                          : 'bg-white text-slate-700 border border-slate-200/80 shadow-xs'
+                      }`}
                   >
                     {lever}
                   </span>
@@ -118,7 +117,7 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
           </motion.div>
 
           {/* Card 3 (Top Right, 4 Cols): Soft Peach Reputation Shield Card */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -160,7 +159,7 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
           </motion.div>
 
           {/* Card 4 (Bottom Left, 8 Cols): Soft Sage Green Local Dominance Card */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -213,7 +212,7 @@ export const BuiltForSmallBusinesses: React.FC<BuiltForSmallBusinessesProps> = (
           </motion.div>
 
           {/* Card 5 (Bottom Right, 4 Cols): Industries & Playbooks */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

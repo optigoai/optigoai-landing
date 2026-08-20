@@ -8,13 +8,13 @@ interface FutureVisionProps {
 export const FutureVision: React.FC<FutureVisionProps> = ({ onOpenGetStarted }) => {
   return (
     <section className="py-20 sm:py-28 bg-slate-950 text-white relative overflow-hidden">
-      
+
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-tr from-blue-600/20 via-emerald-600/10 to-indigo-600/20 blur-3xl pointer-events-none rounded-full" />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          
+
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-6 border border-blue-400/20">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Our Mission</span>

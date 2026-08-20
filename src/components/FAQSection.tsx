@@ -8,7 +8,7 @@ export const FAQSection: React.FC = () => {
   const faqs = [
     {
       q: 'What is OptigoAI?',
-      a: 'OptigoAI is your AI marketing manager. It connects to your Google Business, Instagram, and Facebook — analyzes performance, finds opportunities, creates content, and gives you a daily action plan.',
+      a: 'OptigoAI is an AI marketing assistant and AI CMO for businesses. It connects to your Google Business Profile, Instagram, and Facebook — analyzes performance, finds opportunities, creates content, and gives you a daily action plan.',
     },
     {
       q: 'Is OptigoAI only for large businesses?',
@@ -47,7 +47,7 @@ export const FAQSection: React.FC = () => {
   return (
     <section id="faq" className="py-20 sm:py-28 bg-white border-b border-slate-200/80 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold uppercase tracking-wider mb-4 border border-blue-200/80">
@@ -71,11 +71,10 @@ export const FAQSection: React.FC = () => {
             return (
               <div
                 key={faq.q}
-                className={`rounded-2xl border transition-colors duration-200 overflow-hidden ${
-                  isOpen 
-                    ? 'bg-[#FAF9F6] border-blue-200 shadow-xs' 
+                className={`rounded-2xl border transition-colors duration-200 overflow-hidden ${isOpen
+                    ? 'bg-[#FAF9F6] border-blue-200 shadow-xs'
                     : 'bg-white border-slate-200 hover:border-slate-300'
-                }`}
+                  }`}
               >
                 <button
                   onClick={() => toggleFAQ(idx)}
@@ -84,9 +83,8 @@ export const FAQSection: React.FC = () => {
                   <span className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
                     {faq.q}
                   </span>
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
-                    isOpen ? 'bg-blue-600 text-white rotate-180' : 'bg-slate-100 text-slate-600'
-                  }`}>
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${isOpen ? 'bg-blue-600 text-white rotate-180' : 'bg-slate-100 text-slate-600'
+                    }`}>
                     <ChevronDown className="w-4 h-4" />
                   </div>
                 </button>

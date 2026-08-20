@@ -148,8 +148,11 @@ export const AICMOExample: React.FC<AICMOExampleProps> = ({ onOpenGetStarted, on
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-white border border-slate-200 p-1 flex items-center justify-center shadow-xs shrink-0 mt-0.5">
               <img 
                 src="/assets/optigoai-logo-removebg.png" 
-                alt="OptigoAI Logo" 
+                alt="OptigoAI — AI Marketing Assistant" 
                 className="w-full h-full object-contain"
+                width="36"
+                height="36"
+                loading="lazy"
               />
             </div>
 
