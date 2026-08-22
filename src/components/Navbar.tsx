@@ -42,9 +42,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGetStarted, onOpenVideoGui
             <img
               src="/assets/optigoai-logo-removebg.png"
               alt="OptigoAI — AI Marketing Assistant"
-              className="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105"
-              width="150"
-              height="48"
+              className="h-7 sm:h-8 md:h-8.5 w-auto object-contain transition-transform group-hover:scale-105"
             />
           </a>
         </div>
