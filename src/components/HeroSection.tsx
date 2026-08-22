@@ -158,17 +158,25 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenGetStarted, onOp
           transition={{ delay: 0.2, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="relative rounded-[32px] sm:rounded-[44px] overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] border border-slate-200/80 bg-slate-950 p-4 sm:p-7 md:p-10 transform-gpu"
         >
-          {/* Subdued, Calm Landscape Background */}
-          <div className="absolute inset-0 z-0 pointer-events-none">
-            <img
-              src="/assets/hero_lush_background.jpg"
-              alt="Lush landscape texture"
-              className="w-full h-full object-cover object-center opacity-70 saturate-[80%]"
-            />
+          {/* Subdued, Calm Landscape Background (CSS background so Googlebot does not index it as thumbnail) */}
+          <div
+            className="absolute inset-0 z-0 pointer-events-none bg-cover bg-center opacity-70 saturate-[80%]"
+            style={{ backgroundImage: 'url(/assets/hero_lush_background.jpg)' }}
+            data-nosnippet
+          >
             {/* Cool Slate-Blue Ambient Tint (Tones down harsh warmth & brightness) */}
             <div className="absolute inset-0 bg-slate-950/50" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/30 to-slate-950/50" />
           </div>
+
+          {/* Semantic Primary Hero Image for Google Search & Screen Readers */}
+          <img
+            src="/assets/hero.png"
+            alt="OptigoAI — AI Marketing Assistant for Small Businesses"
+            className="sr-only pointer-events-none"
+            width="1200"
+            height="630"
+          />
 
           <div className="relative z-10">
 

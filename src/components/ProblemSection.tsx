@@ -408,11 +408,10 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ onOpenGetStarted
             <div className="relative z-10">
               {/* Mockup Preview Header with Background Texture */}
               <div className="h-44 sm:h-48 rounded-2xl bg-slate-950 p-4 mb-6 border border-slate-800 flex flex-col justify-between text-white relative overflow-hidden">
-                <img 
-                  src="/assets/audit_card_bg.jpg" 
-                  onError={(e) => { e.currentTarget.src = '/assets/hero_lush_background.jpg'; }}
-                  alt="Audit background texture" 
-                  className="absolute inset-0 w-full h-full object-cover opacity-35"
+                <div 
+                  className="absolute inset-0 w-full h-full bg-cover bg-center opacity-35"
+                  style={{ backgroundImage: 'url(/assets/hero_lush_background.jpg)' }}
+                  data-nosnippet
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent" />
                 
@@ -433,7 +432,7 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ onOpenGetStarted
                 </div>
 
                 <div className="relative z-10 text-[10px] text-emerald-400 font-medium flex items-center gap-1">
-                  <CheckCircle2 className="w-3 h-3" /> Auto-diagnosed in 12 seconds
+                  <CheckCircle2 className="w-3.5 h-3.5" /> Auto-diagnosed in 12 seconds
                 </div>
               </div>
 
@@ -463,10 +462,10 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ onOpenGetStarted
             <div className="relative z-10">
               {/* Mockup Preview Header with Background Texture */}
               <div className="h-44 sm:h-48 rounded-2xl bg-slate-950 p-4 mb-6 border border-slate-800 flex flex-col justify-between relative overflow-hidden">
-                <img 
-                  src="/assets/hero_lush_background.jpg" 
-                  alt="AI CMO Background texture" 
-                  className="absolute inset-0 w-full h-full object-cover opacity-35"
+                <div 
+                  className="absolute inset-0 w-full h-full bg-cover bg-center opacity-35"
+                  style={{ backgroundImage: 'url(/assets/hero_lush_background.jpg)' }}
+                  data-nosnippet
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent" />
                 
@@ -514,11 +513,10 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ onOpenGetStarted
             <div className="relative z-10">
               {/* Mockup Preview Header with Background Texture */}
               <div className="h-44 sm:h-48 rounded-2xl bg-slate-950 p-4 mb-6 border border-slate-800 flex flex-col justify-between text-white relative overflow-hidden">
-                <img 
-                  src="/assets/growth_card_bg.jpg" 
-                  onError={(e) => { e.currentTarget.src = '/assets/hero_lush_background.jpg'; }}
-                  alt="Growth chart background texture" 
-                  className="absolute inset-0 w-full h-full object-cover opacity-35"
+                <div 
+                  className="absolute inset-0 w-full h-full bg-cover bg-center opacity-35"
+                  style={{ backgroundImage: 'url(/assets/hero_lush_background.jpg)' }}
+                  data-nosnippet
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent" />
                 

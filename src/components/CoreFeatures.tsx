@@ -466,15 +466,12 @@ export const CoreFeatures: React.FC<CoreFeaturesProps> = ({ onOpenGetStarted }) 
                   <span className="text-[10px] bg-purple-50 text-purple-700 font-bold px-2 py-0.5 rounded">1080x1080 Ready</span>
                 </div>
 
-                <div className="rounded-xl overflow-hidden border border-slate-200 relative aspect-video bg-slate-900">
-                  <img
-                    src="/assets/hero_lush_background.jpg"
-                    alt="AI marketing creative generation preview"
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover opacity-70"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent p-4 flex flex-col justify-end text-white">
+                <div 
+                  className="rounded-xl overflow-hidden border border-slate-200 relative aspect-video bg-slate-900 bg-cover bg-center"
+                  style={{ backgroundImage: 'url(/assets/hero_lush_background.jpg)' }}
+                  data-nosnippet
+                >
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-slate-950/40 p-4 flex flex-col justify-end text-white">
                     <span className="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Weekend Special</span>
                     <h4 className="text-base font-bold font-serif-heading">Artisan Coffee & Bakery Flight</h4>
                     <p className="text-[11px] text-slate-300">20% Off every Saturday morning</p>
